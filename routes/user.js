@@ -112,4 +112,4 @@ userRouter.get("/", async (req, res) => {
 
 
 
-module.exports = userRouter
+module.exports = {userRouter}

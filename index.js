@@ -2,9 +2,13 @@ const express = require('express');
 const { connection } = require('./configs/db');
 const { adminRouter } = require('./routes/admin.routes');
 
-const userRouter = require('./routes/user');
+const {userRouter} = require('./routes/user');
+
+
+
 
 const { logger } = require('./middlewares/logger.middleware');
+
 
 require('dotenv').config();
 
