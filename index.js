@@ -1,12 +1,15 @@
 const express = require('express');
 const { connection } = require('./configs/db');
 const { adminRouter } = require('./routes/admin.routes');
+const { logger } = require('./middlewares/logger.middleware');
 require('dotenv').config();
 
 const app = express();
 app.use(express.json());
 
-app.use('/admin', adminRouter);
+app.use(logger);
+
+app.use('/admin',adminRouter);
 
 app.listen(process.env.PORT, ()=>{
     connection();
