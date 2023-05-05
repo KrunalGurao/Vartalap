@@ -15,12 +15,22 @@
     <header>
         <a href="#" class="logo">
             <img src="photos/logo.jpg" alt="" class="img">
-            <!-- WhatsApp -->
         </a>
         <div class="action">
             <!-- <a href="#"><ion-icon name="camera-outline"></ion-icon></a> -->
-            <a href="#"><ion-icon name="search-outline"></ion-icon></a>
-            <a href="#"><ion-icon name="ellipsis-vertical-outline"></ion-icon></a>
+            <a href="#"><form id="myForm">
+                <input type="search" placeholder="Search">
+              </form>
+              <ion-icon name="search-outline"></ion-icon>
+            </a>
+            <div class="dropdown">
+            <a href="#" class="dropbtn"><ion-icon name="ellipsis-vertical-outline"></ion-icon></a>
+            <div class="dropdown-content">
+                <a href="#"><ion-icon name="person-sharp"></ion-icon>&nbsp Profile</a>
+                <a href="#"><ion-icon name="settings-sharp"></ion-icon>&nbsp Setting</a>
+                <a href="#"><ion-icon name="information-circle-sharp"></ion-icon>&nbsp Help</a>
+                <a href="#"><ion-icon name="log-out-sharp"></ion-icon>&nbsp Logout</a>
+            </div></div>
         </div>
     </header>
     <div class="tabs">

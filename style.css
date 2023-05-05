@@ -13,17 +13,117 @@ body{
     min-height: 100vh;
     background: #f2eadf;
 }
+:root{
+    --main:#327d7d;
+    --white:white;
+}
+/* ---------------------------- */
+input {
+    outline: none;
+  }
+  
+  input[type=search] {
+    -webkit-appearance: textfield;
+    -webkit-box-sizing: content-box;
+    font-family: inherit;
+    font-size: 18px;
+  }
+  
+  input::-webkit-search-decoration,
+  input::-webkit-search-cancel-button {
+    display: none;
+  }
+  
+  input[type=search] {
+    /* background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center; */
+    border: solid 1px #ccc;
+    padding: 2px 4px;
+    width: 75px;
+    -webkit-border-radius: 10em;
+    -moz-border-radius: 10em;
+    border-radius: 10em;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+  }
+  
+  input[type=search]:focus {
+    width: 230px;
+    background-color: #fff;
+    border-color: #66CC75;
+    -webkit-box-shadow: 0 0 5px rgba(109, 207, 246, .5);
+    -moz-box-shadow: 0 0 5px rgba(109, 207, 246, .5);
+    box-shadow: 0 0 5px rgba(109, 207, 246, .5);
+  }
+  
+  input:-moz-placeholder {
+    color: #999;
+  }
+  
+  input::-webkit-input-placeholder {
+    color: #999;
+  }
+  
+  #myForm {
+    position: relative;
+    width: 160px;
+  }
+  
+  #myForm input[type=search] {
+    position: absolute;
+    right: 0;
+  }
+/* --------------------- */
+.dropbtn {
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #898787;
+    min-width: 130px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #333;
+}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+/* --------------------------- */
 .container{
     position: relative;
     width: 100%;
     height: 600px;
-    background: #fff;
+    background: var(--white);
     box-shadow: 0 5px 5px rgba(0,0,0,0.15);
     overflow: hidden;
 }
 header{
     position: relative;
-    background:#008069;
+    background:var(--main);
     padding: 20px 10px;
     display: flex;
     justify-content: space-around;
@@ -40,7 +140,7 @@ header .action{
     gap: 65px;
 }
 header .action a{
-    color: white;
+    color: var(--white);
     display: flex;
     text-decoration: none;
 }
@@ -52,12 +152,12 @@ header .action a{
 .buttons{
     position: relative;
     display: flex;
-    background:#008069 ;
+    background:var(--main);
     border-bottom: 1px solid rgba(27, 27, 27, 0.25);
 }
 .buttons label{
     width: 25%;
-    color: white;
+    color: var(--white);
     opacity: 0.75;
     text-align: center;
     padding: 5px 0;
@@ -83,7 +183,7 @@ header .action a{
     bottom: 0;
     width: 25%;
     height: 3px;
-    background: white;
+    background: var(--white);
     transition: 0.5s;
 }
 .tabs input:nth-child(1):checked ~ .buttons .underline{
@@ -144,7 +244,7 @@ header .action a{
     cursor: pointer;
 }
 .chatlist .block:hover{
-    background: #f5f5f5;
+    background: var(--white);
 }
 .chatlist .block .imgbx{
     position: relative;
@@ -208,13 +308,13 @@ header .action a{
     left: 43px;
     width: 25px;
     height: 25px;
-    background: #008069;
-    border: 3px solid #fff;
+    background: var(--main);
+    border: 3px solid var(--white);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: var(--white);
     font-size: 1.2em;
     font-weight: 500;
 }
@@ -225,17 +325,17 @@ header .action a{
     font-size: 0.85em;
 }
 .unseen .imgbx{
-    box-shadow: 0 0 0 2px #fff,0 0 0 4px #008069;
+    box-shadow: 0 0 0 2px var(--white),0 0 0 4px var(--main);
 }
 .seen .imgbx{
-    box-shadow: 0 0 0 2px #fff,0 0 0 4px #bbb;
+    box-shadow: 0 0 0 2px var(--white),0 0 0 4px #bbb;
 }
 .green{
-    background: #008069;
+    background: var(--main);
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
+    color: var(--white);
     font-size: 1.5em;
     rotate: -45deg;
 }
@@ -259,14 +359,14 @@ header .action a{
     z-index: 1000;
 }
 .quickbtn .btn{
-    background: #008069;
+    background: var(--main);
     width: 50px;
     height: 50px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: var(--white);
     font-size: 1.35em;
     cursor: pointer;
     display: none;
