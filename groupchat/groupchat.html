@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/groupchat.css">
+    <link rel="stylesheet" href="\styles\groupchat.css">
     <title>Vartalap</title>
 </head>
 <body>
     <main>
         <header>
             <div class="title">
-                <img src="/img/Vartalap-1 (4).png" alt=""  width="55px">
+                <img src="\img\Vartalap-1 (4).png" alt=""  width="55px">
                 <h1>Vartalap</h1>
             </div>
             <button type="button"></button>
@@ -20,35 +20,34 @@
             <div class="users-window">
                 <div class="users-head">
                     <h3>People</h3>
-                    <h4>3</h4>
+                    <h4 class="users-count">0</h4>
                 </div>
                 <div class="users-list">
-                    <p>Jarvis</p>
-                    <p>Ultron</p>
-                    <p>Veronica</p>
                 </div>
             </div>
             <div class="chat-window">
                 <div class="chats">
-                    <div class="user-join">
-                        <p><b>Jarvis</b>joined the chat</p>
-                    </div>
-                    <div class="message incoming">
+                    
+                    <!-- <div class="message incoming">
                         <h5>Jarvis</h5>
                         <p>Hello Ultron</p>
                     </div>
                     <div class="message outgoing">
                         <h5>Veronica</h5>
                         <p>Welcome Jarvis</p>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="user-input">
-                    <input type="text" placeholder="Type your message...">
-                    <button>SEND</button>
+                    <input id="user-msg" type="text" placeholder="Type your message...">
+                    <button id="msg-send" type="button">SEND</button>
                 </div>
             </div>
         </div>
 
     </main>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/client.js"></script>
 </body>
 </html>

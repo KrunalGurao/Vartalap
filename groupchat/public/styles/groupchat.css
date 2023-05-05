@@ -1,0 +1,155 @@
+
+
+/* $light-green: #80cbc4;
+$light-gray: #7E878c;
+$dark-gray: #3f3f3f;
+$white: #ffffff;
+fsize : 16px;
+*/
+
+
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    overflow: hidden;
+    border-radius: 10px;
+
+    
+}
+
+    header{
+        background-color: #009688;
+        color : #ffffff;
+        padding: 7px 20px;
+    }
+
+    div.title{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    div.title h1{
+        font-size: 32px;
+        margin-left: 10px;
+    }
+
+div.container{
+     background-color: #7E878c;
+     padding: 20px;
+     display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: stretch;
+}
+
+div.users-window{
+    width: 350px;
+    color: #ffffff;
+     background-color: #3f3f3f;
+     padding: 15px 20px;
+     border-radius: 10px;
+     margin-right: 20px;
+}
+
+div.users-head{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+}
+
+div.users-list p{
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 15px;
+
+}
+
+div.chat-window{
+    width: 100%;
+    border-radius: 10px;
+    background-color: #3f3f3f;
+}
+
+div.chats{
+    height: 65vh;
+    padding: 20px;
+    overflow-y: auto;
+}
+div.user-join{
+    font-size: 0.9rem;
+    color:#3f3f3f;
+    background-color: #ffffff;
+    border-radius: 50px;
+    width: max-content;
+    padding: 7px 20px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+div.message{
+    color: #3f3f3f;
+    background-color: #ffffff;
+    padding: 5px 15px;
+    max-width: 400px;
+    margin-bottom: 15px;
+    border-radius: 10px 50px 50px 10px;
+}
+div.message{
+    font-size: 16px;
+}
+
+div.outgoing{
+    margin-left: auto;
+    color: #ffffff;
+    background-color: #009688;
+    border-radius: 50px 10px 10px 50px;
+    text-align: right;
+}
+
+div.user-input{
+    display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+        padding: 20px;      
+}
+div.user-input input{
+    font-size: 16px;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    width: 100%;
+    border-radius: 50px 0 0 50px;
+
+}
+
+div.user-input button{
+    font-size: 16px;
+    font-weight: 600;
+    padding: 5px 15px;
+    border: none;
+    outline: none;
+    letter-spacing: 0.5;
+    color: #ffffff;
+    background-color: #009688;
+    border-radius: 0 50px 50px 0;
+}
