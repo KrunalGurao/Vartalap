@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</head>
+<body>
+   <div class="container">
+    <header>
+        <a href="#" class="logo">
+            <img src="photos/logo.jpg" alt="" class="img">
+            <!-- WhatsApp -->
+        </a>
+        <div class="action">
+            <!-- <a href="#"><ion-icon name="camera-outline"></ion-icon></a> -->
+            <a href="#"><ion-icon name="search-outline"></ion-icon></a>
+            <a href="#"><ion-icon name="ellipsis-vertical-outline"></ion-icon></a>
+        </div>
+    </header>
+    <div class="tabs">
+        <input type="radio" id="chats" name="group" checked>
+        <input type="radio" id="group" name="group">
+        <input type="radio" id="status" name="group">
+        <input type="radio" id="calls" name="group">
+        <div class="buttons">
+            <label for="chats" id="size"><ion-icon name="person-circle-outline"></ion-icon></label>
+            <label for="group" id="size"><ion-icon name="people-circle-outline"></ion-icon></label>
+            <label for="status">Status</label>
+            <label for="calls">Calls</label>
+            <div class="underline"></div>
+        </div>
+
+        <div class="quickbtn">
+            <div class="btn message"><ion-icon name="add-circle"></ion-icon></div>
+            <div class="btn message"><ion-icon name="add-circle"></ion-icon></div>
+            <div class="btn camera">
+                <div class="pencil"><ion-icon name="pencil"></ion-icon></div>
+                <ion-icon name="camera"></ion-icon>
+            </div>
+            <div class="btn call"><ion-icon name="call"></ion-icon></div>
+        </div>
+
+        <div class="content">
+            <div class="box chats">
+                <div class="data">
+                    <div class="chatlist">
+                        <div class="block" onclick="window.location.href='chatOne.html'">
+                            <div class="imgbx">
+                                <img src="photos/1680318594761 (2).jpg" alt="">
+                            </div>
+                            <div class="details">
+                                <div class="listhead">
+                                    <h4>Chandan Kumar</h4>
+                                    <p class="time">12:56</p>
+                                </div>
+                                <div class="message_p">
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore dolor perferendis cupiditate similique sed deleniti eos a rem quasi magnam laborum, ex quisquam aspernatur repellendus nemo aperiam, sequi facilis quam.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box group">
+                <div class="data">
+                    <div class="chatlist">
+                        <div class="block unread" onclick="window.location.href='chatMany.html'">
+                            <div class="imgbx">
+                                <img src="photos/1680318594761 (2).jpg" alt="">
+                            </div>
+                            <div class="details">
+                                <div class="listhead">
+                                    <h4>vartalap</h4>
+                                    <p class="time">12:56</p>
+                                </div>
+                                <div class="message_p">
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore dolor perferendis cupiditate similique sed deleniti eos a rem quasi magnam laborum, ex quisquam aspernatur repellendus nemo aperiam, sequi facilis quam.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box status">
+                <div class="data">
+                    <div class="chatlist">
+                        <div class="block">
+                            <div class="imgbx">
+                                <img src="photos/1680318594761 (2).jpg" alt="">
+                            </div>
+                            <div class="plus">+</div>
+                            <div class="details">
+                                <div class="listhead">
+                                    <h4>My Status</h4>
+                                </div>
+                                <div class="message_p">
+                                    <p>Tap to add status update</p>
+                                </div>
+                            </div>
+                        </div>
+                        <label for="">Recent Updates</label>
+                        <div class="block unseen">
+                            <div class="imgbx">
+                                <img src="photos/1680318594761 (2).jpg" alt="">
+                            </div>
+                            <div class="details">
+                                <div class="listhead">
+                                    <h4>Chandan Kumar</h4>
+                                   
+                                </div>
+                                <div class="message_p">
+                                    <p>Just Now</p>
+                                </div>
+                            </div>
+                        </div>
+                        <label for="">Viewed Updates</label>
+                        <div class="block seen">
+                            <div class="imgbx">
+                                <img src="photos/1680318594761 (2).jpg" alt="">
+                            </div>
+                            <div class="details">
+                                <div class="listhead">
+                                    <h4>Chandan Kumar</h4>
+                                   
+                                </div>
+                                <div class="message_p">
+                                    <p>Yesterday 01:39</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box calls">
+                <div class="data">
+                    <div class="chatlist">
+                        <div class="block">
+                            <div class="imgbx green">
+                                <ion-icon name="link-outline"></ion-icon> 
+                            </div>
+                            <div class="details">
+                                <div class="listhead">
+                                    <h4>Create call link</h4>
+                                    
+                                </div>
+                                <div class="message_p">
+                                    <p>Share a link for your WhatsApp call</p>
+                                </div>
+                            </div>
+                        </div>
+                        <label for="">Recent</label>
+                        <div class="block">
+                            <div class="imgbx">
+                                <img src="photos/1680318594761 (2).jpg" alt="">
+                            </div>
+                            <div class="details">
+                                <div class="listhead">
+                                    <h4>Chandan Kumar</h4>
+                                   
+                                </div>
+                                <div class="message_p incoming">
+                                    <p><ion-icon name="arrow-down"></ion-icon> 04/05/2023 01:39</p>
+                                </div>
+                            </div>
+                            <ion-icon name="call" class="call"></ion-icon>
+                        </div>
+                        <div class="block">
+                            <div class="imgbx">
+                                <img src="photos/1680318594761 (2).jpg" alt="">
+                            </div>
+                            <div class="details">
+                                <div class="listhead">
+                                    <h4>Chandan Kumar</h4>
+                                   
+                                </div>
+                                <div class="message_p outgoing">
+                                    <p><ion-icon name="arrow-up"></ion-icon> Yesterday 2:15</p>
+                                </div>
+                            </div>
+                            <ion-icon name="call" class="call"></ion-icon>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+   
+   </div>
+</body>
+</html>
