@@ -17,6 +17,7 @@ fsize : 16px;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 
@@ -25,7 +26,9 @@ main{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80%;
+    width: 100%;
+    height: 100%;
+            /* min-height: 100vh; */
     overflow: hidden;
     border-radius: 10px;
 
@@ -36,6 +39,11 @@ main{
         background-color: #009688;
         color : #ffffff;
         padding: 7px 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
     }
 
     div.title{
@@ -43,6 +51,13 @@ main{
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
+    }
+
+    header button{
+        background-color: transparent;
+        border: none;
+        outline: none;
+        display: none;
     }
 
     div.title h1{
@@ -76,6 +91,12 @@ div.users-head{
         margin-bottom: 15px;
 }
 
+div.users-head h4{
+    background-color: #7E878c;
+    padding: 0 8px;
+    border-radius: 50px;
+}
+
 div.users-list p{
     font-size: 16px;
     font-weight: 500;
@@ -86,7 +107,8 @@ div.users-list p{
 div.chat-window{
     width: 100%;
     border-radius: 10px;
-    background-color: #3f3f3f;
+    /* background-color: #3f3f3f; */
+    background-image: url("https://as1.ftcdn.net/v2/jpg/05/77/39/62/1000_F_577396291_i4LHySSzrD2yR7fkhOZxHY53B1eJsCYt.jpg");
 }
 
 div.chats{
@@ -152,4 +174,37 @@ div.user-input button{
     color: #ffffff;
     background-color: #009688;
     border-radius: 0 50px 50px 0;
+}
+
+
+/* media query */
+
+@media screen and (max-width: 900px) {
+    main{
+        width: 100%;
+    }
+    header button{
+        display: block;
+    }
+
+    div.container{
+        position: relative;
+   }
+   
+    div.users-window{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        border-radius: 0 0 10px 10px;
+        height: max-content;
+        z-index: 11;
+        box-shadow: 0 15px 20px -20px black;
+        padding-bottom: 0;
+        display: none;
+    }
+
+    div.message{
+        max-width: 300px;
+    }
 }
