@@ -1,0 +1,108 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.navbar{
+    background-color: #001621c0 !important; 
+}
+
+#loading{
+    z-index: 9999;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #fff url('/1487.gif') no-repeat center;
+}
+
+#brandLogo {
+    width: 122px;
+    margin-top: -13px;
+    margin-bottom: -13px;
+}
+
+#welcomeMsg{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: white;
+    font-size: 24px;
+    margin-right: 14px;
+}
+
+#adminList{
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    overflow-y: scroll;
+    padding: 12px;
+}
+
+#adminList::-webkit-scrollbar{
+    width: 5px;
+    border-radius: 5px;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+}
+
+#adminList::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#adminList>div{
+    margin-top: 4px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+
+#adminList>div>.details{
+    width: 70%;
+}
+
+#adminList > div::-webkit-scrollbar{
+    width: 5px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#adminList > div::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+#adminList>div>img{
+    height: 94px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#adminList>div>div>h2{
+    margin-bottom: 0px;
+    margin-top: 8px;
+    margin-left: 20px;
+}
+
+#adminList>div>div>p{
+    margin-bottom: 0px;
+    margin-top: 8px;
+    margin-left: 20px;
+}
+
+#adminList .changeStatus{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+@media only screen and (max-width: 1000px){
+    #adminList{
+        width: 100%;
+    }
+}

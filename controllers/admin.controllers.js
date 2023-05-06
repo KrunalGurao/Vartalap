@@ -12,7 +12,7 @@ const login = async (req, res)=>{
         const isUserValid = await userModel.findOne({email});
         if(!isUserValid) return res.status(404).send({msg: "Wrong Credentials"});
         const result = await compare(password, isUserValid.password);
-        if(result){
+        if(result && isUserValid.role==='admin'){
             const access_token = jwt.sign({userId: isUserValid._id}, process.env.JWT_SECRET_KEY, {expiresIn: '4h'});
             return res.status(200).send({msg: 'Receiving from frontend', access_token, 'admin': isUserValid.name});
         }
@@ -58,8 +58,20 @@ const adminAuth = async (req, res) => {
 
 const trafficReport = async (req, res)=>{
     try{
-        let list = await logModel.aggregate([{$group: {_id: '$path', count: {$sum: 1}}}])
-        res.send(list);
+        const token = req.headers.authorization.split(' ')[1] || req.headers.authorization;
+        if(token){
+            const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY);
+            const user = await userModel.findById(decoded.userId);
+            if(user.role!=='admin'){
+                res.status(400).send({msg: 'You are not authorized to perform this functionality'});
+            }else{
+                let list = await logModel.aggregate([{$group: {_id: '$path', count: {$sum: 1}}}])
+                res.status(200).send(list);;
+            }
+        }else{
+            
+            res.status(400).send({msg: "Something Went wrong"});
+        }
     }catch(err){
         res.send('Something went wrong');
     }
@@ -67,8 +79,20 @@ const trafficReport = async (req, res)=>{
 
 const listingAdmin = async (req, res)=>{
     try{
-        const list = await userModel.aggregate([{$match: {role: "admin"}},{$project: {_id:0, name: 1, email: 1, icon: 1}}]);
-        res.status(200).send(list);
+        const token = req.headers.authorization.split(' ')[1] || req.headers.authorization;
+        if(token){
+            const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY);
+            const user = await userModel.findById(decoded.userId);
+            if(user.role!=='admin'){
+                res.status(400).send({msg: 'You are not authorized to perform this functionality'});
+            }else{
+                const list = await userModel.aggregate([{$match: {role: "admin"}},{$project: {_id:0, name: 1, email: 1, icon: 1}}]);
+                res.status(200).send(list);
+            }
+        }else{
+            
+            res.status(400).send({msg: "Something Went wrong"});
+        }
     }catch(err){
         console.log('admin/list: ', err.message);
         res.status(500).send({msg: err.message});
@@ -77,33 +101,92 @@ const listingAdmin = async (req, res)=>{
 
 const topTwoRoutes = async (req, res)=>{
     try{
-        const list = await logModel.aggregate([{$group: {_id: '$path', count:{$sum: 1}}},{$sort: {count: -1}}, {$limit: 2}])
-        res.status(200).send(list);
+        const token = req.headers.authorization.split(' ')[1] || req.headers.authorization;
+        if(token){
+            const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY);
+            const user = await userModel.findById(decoded.userId);
+            if(user.role!=='admin'){
+                res.status(400).send({msg: 'You are not authorized to perform this functionality'});
+            }else{
+                const list = await logModel.aggregate([{$group: {_id: '$path', count:{$sum: 1}}},{$sort: {count: -1}}, {$limit: 2}])
+                res.status(200).send(list);
+            }
+        }else{
+            
+            res.status(400).send({msg: "Something Went wrong"});
+        }
     }catch(err){
         console.log('/admin/topTwoRoutes: ', err.message);
         res.status(500).send({msg: err.message});
     }
 }
 
-// const register = async (req, res)=>{
-//     try{
-//         let {name, email, password, role} = req.body;
-//         password = await hash(password, Number(process.env.SALT_ROUNDS));
-//         const newUser = new userModel({name, email, password, role});
-//         await newUser.save();
-//         res.status(200).send({msg: 'User Created'});
-//     }catch(err){
-//         console.log('/admin/register: ', err.message);
-//         res.status(500).send({msg: err.message});
-//     }
-// }
+const userInfo = async (req, res)=>{
+    try{
+        const token = req.headers.authorization.split(' ')[1] || req.headers.authorization;
+        if(token){
+            const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY);
+            const user = await userModel.findById(decoded.userId);
+            if(user.role!=='admin'){
+                res.status(400).send({msg: 'You are not authorized to perform this functionality'});
+            }else{
+                const list = await userModel.aggregate([{$match: {role: 'user'}}, {$project: {_id: 1, name:1, isBlock: 1, email: 1, icon: 1}}]);
+                res.status(200).send(list);
+            }
+        }else{
+            
+            res.status(400).send({msg: "Something Went wrong"});
+        }
+    }catch(err){
+        console.log('/admin/userInfo: ', err.message);
+        res.status(500).send({msg: err.message});
+    }
+}
+
+
+const updatingStatus = async (req, res)=>{
+    try{
+        const token = req.headers.authorization.split(' ')[1] || req.headers.authorization;
+        if(token){
+            const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY);
+            const user = await userModel.findById(decoded.userId);
+            if(user.role!=='admin'){
+                res.status(400).send({msg: 'You are not authorized to perform this functionality'});
+            }else{
+                const {id} = req.params;
+                const status = req.query;
+                await userModel.findByIdAndUpdate(id, status);
+                res.status(200).send({msg: 'updation completed'});
+            }
+        }else{
+            
+            res.status(400).send({msg: "Something Went wrong"});
+        }
+    }catch(err){
+        console.log('/admin/userInfo: ', err.message);
+        res.status(500).send({msg: err.message});
+    }
+    
+}
+
+const register = async (req, res)=>{
+    try{
+        let {name, email, password, role} = req.body;
+        password = await hash(password, Number(process.env.SALT_ROUNDS));
+        const newUser = new userModel({name, email, password, role});
+        await newUser.save();
+        res.status(200).send({msg: 'User Created'});
+    }catch(err){
+        console.log('/admin/register: ', err.message);
+        res.status(500).send({msg: err.message});
+    }
+}
 
 const logout = async (req, res)=>{
     try{
         const token = req.headers.authorization.split(' ')[1] || req.headers.authorization;
         const blacklisted = new blacklistModel({"token": token});
         await blacklisted.save();
-        // console.log(blacklisted);
         res.status(200).send({msg: 'Logout Successful'});
     }catch(err){
         console.log('/admin/logout: ', err.message);
@@ -114,6 +197,6 @@ const logout = async (req, res)=>{
 
 
 module.exports = {
-    login, logout, adminInfo, adminAuth, listingAdmin, trafficReport, topTwoRoutes
+    login, logout, adminInfo, adminAuth, listingAdmin, trafficReport, topTwoRoutes, userInfo, register, updatingStatus
 }
 

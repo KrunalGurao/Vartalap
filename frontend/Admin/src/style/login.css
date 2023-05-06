@@ -1,0 +1,23 @@
+.oauth {
+    background-color: rgb(218, 220, 220);
+}
+
+.oauth a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.oauth:hover {
+    font-weight: 600;
+    background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+#oauthGoogle:hover {
+    color: green;
+}
+
+#oauthGithub:hover {
+    color: rgb(212, 0, 0);
+}
