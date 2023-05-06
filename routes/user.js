@@ -23,7 +23,7 @@ userRouter.post("/register", async (req, res) => {
 
         });
     } catch (error) {
-        res.status(401).send({ "msg": "Some error occoured while  registration..." })
+        res.status(401).send({ "msg": "Some error occoured while registration..." })
 
     }
 

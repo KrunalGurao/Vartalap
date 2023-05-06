@@ -2,6 +2,7 @@ const express = require('express');
 const { connection } = require('./configs/db');
 const { adminRouter } = require('./routes/admin.routes');
 const {userRouter} = require('./routes/user');
+const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 
 
 const { logger } = require('./middlewares/logger.middleware');
@@ -56,6 +57,16 @@ const { chatting } = require('./configs/chatting');
 const serverHttp = http.createServer(app)
 const io = socketio(serverHttp); // with wss we are attaching http server
 chatting(io); // using the imported chatting function and passing io instance/ object 
+
+
+
+
+
+
+
+
+
+
 
 serverHttp.listen(process.env.PORT, async () => {
     try {

@@ -260,12 +260,9 @@ body {
                       <label for="password">Password:</label>
                       <input type="password" id="password" placeholder="Enter your password*" required>
                    </div>
-                   <a href="http://localhost:8080/auth/google">
-                    <button>Continue with Google</button>
-                </a>
                    <div class="form-group" id="jack">
                       <input type="submit" value="Sign-Up">
-                      <a href="./login.html">Sign-In</a>
+                      <a href="./signin.html">Sign-In</a>
                    </div>
                 </form>
              </div>
@@ -317,30 +314,6 @@ formel.addEventListener("submit", (e) => {
             console.log(err);
         })
 })
-
-
-//********************************************************************************************
-
-passport.use(new GoogleStrategy({
-    clientID: "1044555666075-pa5siir8m46p5g1sc18p6jtnmgi0p8i5.apps.googleusercontent.com",
-    clientSecret: "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",
-    callbackURL: "http://localhost:8080/auth/google/callback"
-  },
-  function(accessToken, refreshToken, profile, cb) {
-    console.log(accessToken, refreshToken, profile)
-    
-  }
-));
-
-app.get('/auth/google',
-  passport.authenticate('google', { scope: ['profile', 'email'] }));
-
-
-app.get('/auth/google/callback', 
-  passport.authenticate('google', { failureRedirect: '/signin',session: false }),
-  function(req, res) {
-    res.redirect('/');
-  });
 
 
 

@@ -29,13 +29,10 @@
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^7.1.0",
-
-    "socket.io": "^4.6.1",
-
     "passport": "^0.6.0",
     "passport-google-oauth20": "^2.0.0",
+    "socket.io": "^4.6.1",
     "uuid": "^9.0.0",
-
     "winston": "^3.8.2",
     "winston-mongodb": "^5.1.1"
   }
