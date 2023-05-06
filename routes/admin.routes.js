@@ -1,19 +1,22 @@
 const { Router } = require("express");
-const { logout, login, adminInfo, adminAuth, listingAdmin, trafficReport, topTwoRoutes } = require("../controllers/admin.controllers");
+const { logout, login, adminInfo, adminAuth, listingAdmin, trafficReport, topTwoRoutes, userInfo, register, updatingStatus } = require("../controllers/admin.controllers");
 const { authorization } = require("../middlewares/auth.middleware");
 require('../configs/googleOauth');
 const passport = require('passport');
-const { userModel } = require("../models/user.models");
 const adminRouter = Router();
-const jwt = require('jsonwebtoken');
 require('dotenv').config();
 
+adminRouter.post('/register', register);
 
 adminRouter.post('/login', login);
 
+adminRouter.get('/UserInfo', authorization, userInfo);
+
 adminRouter.get('/logout', authorization, logout);
 
-adminRouter.get('/adminInfo', authorization, adminInfo)
+adminRouter.get('/adminInfo', authorization, adminInfo);
+
+adminRouter.patch('/updatingStatus/:id' , authorization, updatingStatus)
 
 adminRouter.get('/traffic', authorization, trafficReport);
 
