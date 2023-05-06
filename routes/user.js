@@ -12,6 +12,10 @@ const jwt = require("jsonwebtoken")
 userRouter.post("/register", async (req, res) => {
     const { name, email, password } = req.body
     try {
+        const isUserPresent = await userModel.findOne({email})
+        if(isUserPresent){
+            return res.send({"ok":false,"msg":"User is present Login Directly"})
+        }
         bcrypt.hash(password, 5, async (err, hash) => {
             const user = new userModel({ name, email, password: hash })
             await user.save()
