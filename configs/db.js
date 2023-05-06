@@ -8,7 +8,6 @@ const connection = async () =>{
         console.log('Something went wrong with Mongdb Connection');
     }
 }
-
 module.exports = {
     connection
 }
