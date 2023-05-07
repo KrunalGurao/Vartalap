@@ -14,7 +14,7 @@ userRouter.post("/register", async (req, res) => {
     try {
         const isUserPresent = await userModel.findOne({email})
         if(isUserPresent){
-            return res.send({"ok":false,"msg":"User is present Login Directly"})
+            return res.send({"ok":false,"msg":"User is already present login directly"})
         }
         bcrypt.hash(password, 5, async (err, hash) => {
             const user = new userModel({ name, email, password: hash })
