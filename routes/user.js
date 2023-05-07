@@ -19,7 +19,7 @@ userRouter.post("/register", async (req, res) => {
         bcrypt.hash(password, 5, async (err, hash) => {
             const user = new userModel({ name, email, password: hash })
             await user.save()
-            res.status(201).send({ "msg": "Registration Successfully" })
+            res.status(201).send({ "ok":false,"msg": "Registration Successfully" })
 
         });
     } catch (error) {
@@ -40,7 +40,11 @@ userRouter.post("/login", async (req, res) => {
 
     try {
         const user = await userModel.findOne({ email })
-        if (user) {
+        if (!user) {
+            return res.status(400).json({ message: 'Invalid Credential' });
+          }
+    
+       else if(user) {
             bcrypt.compare(password, user.password, function (err, result) {
                 if (result) {
                     res.status(201).send({ "msg": "login successfully", "token": jwt.sign({ "userID": user._id }, "privateKey", { expiresIn: '3h' }),"userdetails":user })
@@ -48,11 +52,8 @@ userRouter.post("/login", async (req, res) => {
                     res.status(401).send({ "msg": "Wrong Credentials" })
                 }
             });
-        } else {
-            res.status(401).send({ "msg": "login failed, user is not present!!" })
-
-        }
-    } catch (error) {
+        }}
+     catch (error) {
         res.status(401).send({ "msg": "error occoured while login" })
 
     }
