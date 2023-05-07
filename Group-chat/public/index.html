@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chat.css">
+    <link rel="icon" href="Images/conversation.png">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
@@ -14,11 +16,11 @@
    <div class="container">
     <header>
         <a href="#" class="logo">
-            <img src="photos/logo.jpg" alt="" class="img">
+            <img src="Images/logo.jpg" alt="" class="img">
         </a>
         <div class="action">
             <div class="dropdown">
-            <a href="#" class="dropbtn"><img class="profile" src="photos/pic.jpg" alt=""></a>
+            <a href="#" class="dropbtn"><img class="profile" src="Images/pic.jpg" alt=""></a>
             <div class="dropdown-content">
                 <a href="#"><ion-icon name="person-sharp"></ion-icon>&nbsp Profile</a>
                 <a href="#"><ion-icon name="settings-sharp"></ion-icon>&nbsp Setting</a>
@@ -56,7 +58,7 @@
                     <div class="chatlist">
                         <div class="block" onclick="window.location.href='chatOne.html'">
                             <div class="imgbx">
-                                <img src="photos/pic.jpg" alt="">
+                                <img src="/img/pic.jpg" alt="">
                             </div>
                             <div class="details">
                                 <div class="listhead">
@@ -72,31 +74,80 @@
                 </div>
             </div>
             <div class="box group">
-                <div class="data">
-                    <div class="chatlist">
-                        <div class="block unread" onclick="window.location.href='chatMany.html'">
-                            <div class="imgbx">
-                                <img src="photos/pic.jpg" alt="">
-                            </div>
-                            <div class="details">
-                                <div class="listhead">
-                                    <h4>vartalap</h4>
-                                    <p class="time">12:56</p>
+                <div class="aaa">
+                <div>
+                    <div class="data">
+                        <div class="chatlist">
+                            <div class="block">
+                                <div class="imgbx">
+                                    <img src="/img/pic.jpg" alt="">
                                 </div>
-                                <div class="message_p">
-                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore dolor perferendis cupiditate similique sed deleniti eos a rem quasi magnam laborum, ex quisquam aspernatur repellendus nemo aperiam, sequi facilis quam.</p>
+                                <div class="details">
+                                    <div class="listhead">
+                                        <h4>Vartalap</h4>
+                                        <p class="time">12:56</p>
+                                    </div>
+                                    <div class="message_p">
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="block">
+                                <div class="imgbx">
+                                    <img src="/img/pic.jpg" alt="">
+                                </div>
+                                <div class="details">
+                                    <div class="listhead">
+                                        <h4>NXM-101</h4>
+                                        <p class="time">12:56</p>
+                                    </div>
+                                    <div class="message_p">
+                                        <p>New to Backend</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="block">
+                                <div class="imgbx">
+                                    <img src="/img/pic.jpg" alt="">
+                                </div>
+                                <div class="details">
+                                    <div class="listhead">
+                                        <h4>NXM-201</h4>
+                                        <p class="time">12:56</p>
+                                    </div>
+                                    <div class="message_p">
+                                        <p>Learning Backend</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                
+                <div class="join-container">
+                    <main class="join-main">
+                        <form action="chat.html">
+                            <div class="form-control">
+                                <label for="username">Username</label>
+                                <input type="text" name="username" id="username" placeholder="Enter username..." required />
+                                
+                            </div>
+                            <div class="form-control">
+                                <label for="room">Room</label>
+                                <input type="text" name="room" id="room" placeholder="Enter room name..." required />
+                            </div>
+                            <button type="submit" class="btn">Join Chat</button>
+                        </form>
+                    </main>
+                </div>
+            </div>
             </div>
             <div class="box status">
                 <div class="data">
                     <div class="chatlist">
                         <div class="block">
                             <div class="imgbx">
-                                <img src="photos/pic.jpg" alt="">
+                                <img src="/img/pic.jpg" alt="">
                             </div>
                             <div class="plus">+</div>
                             <div class="details">
@@ -111,7 +162,7 @@
                         <label for="">Recent Updates</label>
                         <div class="block unseen">
                             <div class="imgbx">
-                                <img src="photos/pic.jpg" alt="">
+                                <img src="/img/pic.jpg" alt="">
                             </div>
                             <div class="details">
                                 <div class="listhead">
@@ -126,7 +177,7 @@
                         <label for="">Viewed Updates</label>
                         <div class="block seen">
                             <div class="imgbx">
-                                <img src="photos/pic.jpg" alt="">
+                                <img src="/img/pic.jpg" alt="">
                             </div>
                             <div class="details">
                                 <div class="listhead">
@@ -161,7 +212,7 @@
                         <label for="">Recent</label>
                         <div class="block">
                             <div class="imgbx">
-                                <img src="photos/pic.jpg" alt="">
+                                <img src="/img/pic.jpg" alt="">
                             </div>
                             <div class="details">
                                 <div class="listhead">
@@ -176,7 +227,7 @@
                         </div>
                         <div class="block">
                             <div class="imgbx">
-                                <img src="photos/pic.jpg" alt="">
+                                <img src="/img/pic.jpg" alt="">
                             </div>
                             <div class="details">
                                 <div class="listhead">
@@ -202,5 +253,6 @@
     logout.addEventListener("click",()=>{
         console.log("helo")
     })
+   
 </script>
 </html>
