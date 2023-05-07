@@ -17,19 +17,13 @@
             <img src="photos/logo.jpg" alt="" class="img">
         </a>
         <div class="action">
-            <!-- <a href="#"><ion-icon name="camera-outline"></ion-icon></a> -->
-            <a href="#"><form id="myForm">
-                <input type="search" placeholder="Search">
-              </form>
-              <ion-icon name="search-outline"></ion-icon>
-            </a>
             <div class="dropdown">
-            <a href="#" class="dropbtn"><ion-icon name="ellipsis-vertical-outline"></ion-icon></a>
+            <a href="#" class="dropbtn"><img class="profile" src="photos/pic.jpg" alt=""></a>
             <div class="dropdown-content">
                 <a href="#"><ion-icon name="person-sharp"></ion-icon>&nbsp Profile</a>
                 <a href="#"><ion-icon name="settings-sharp"></ion-icon>&nbsp Setting</a>
                 <a href="#"><ion-icon name="information-circle-sharp"></ion-icon>&nbsp Help</a>
-                <a href="#"><ion-icon name="log-out-sharp"></ion-icon>&nbsp Logout</a>
+                <a href="#" class="logout"><ion-icon name="log-out-sharp"></ion-icon>&nbsp Logout</a>
             </div></div>
         </div>
     </header>
@@ -62,7 +56,7 @@
                     <div class="chatlist">
                         <div class="block" onclick="window.location.href='chatOne.html'">
                             <div class="imgbx">
-                                <img src="photos/1680318594761 (2).jpg" alt="">
+                                <img src="photos/pic.jpg" alt="">
                             </div>
                             <div class="details">
                                 <div class="listhead">
@@ -82,7 +76,7 @@
                     <div class="chatlist">
                         <div class="block unread" onclick="window.location.href='chatMany.html'">
                             <div class="imgbx">
-                                <img src="photos/1680318594761 (2).jpg" alt="">
+                                <img src="photos/pic.jpg" alt="">
                             </div>
                             <div class="details">
                                 <div class="listhead">
@@ -102,7 +96,7 @@
                     <div class="chatlist">
                         <div class="block">
                             <div class="imgbx">
-                                <img src="photos/1680318594761 (2).jpg" alt="">
+                                <img src="photos/pic.jpg" alt="">
                             </div>
                             <div class="plus">+</div>
                             <div class="details">
@@ -117,7 +111,7 @@
                         <label for="">Recent Updates</label>
                         <div class="block unseen">
                             <div class="imgbx">
-                                <img src="photos/1680318594761 (2).jpg" alt="">
+                                <img src="photos/pic.jpg" alt="">
                             </div>
                             <div class="details">
                                 <div class="listhead">
@@ -132,7 +126,7 @@
                         <label for="">Viewed Updates</label>
                         <div class="block seen">
                             <div class="imgbx">
-                                <img src="photos/1680318594761 (2).jpg" alt="">
+                                <img src="photos/pic.jpg" alt="">
                             </div>
                             <div class="details">
                                 <div class="listhead">
@@ -167,7 +161,7 @@
                         <label for="">Recent</label>
                         <div class="block">
                             <div class="imgbx">
-                                <img src="photos/1680318594761 (2).jpg" alt="">
+                                <img src="photos/pic.jpg" alt="">
                             </div>
                             <div class="details">
                                 <div class="listhead">
@@ -182,7 +176,7 @@
                         </div>
                         <div class="block">
                             <div class="imgbx">
-                                <img src="photos/1680318594761 (2).jpg" alt="">
+                                <img src="photos/pic.jpg" alt="">
                             </div>
                             <div class="details">
                                 <div class="listhead">
@@ -203,4 +197,10 @@
    
    </div>
 </body>
+<script>
+    let logout=document.querySelector(".logout");
+    logout.addEventListener("click",()=>{
+        console.log("helo")
+    })
+</script>
 </html>
