@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/img/Vartalap-1 (4).png">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <title>SIGNUP</title>
+    <title>SIGNIN</title>
 </head>
 <body>
 
@@ -141,104 +141,113 @@
 
 body {
             font-family: 'Open Sans', sans-serif;
-           
-         }
+            background-image: url("https://img.freepik.com/premium-photo/blank-green-paper-texture-background-detail-close-up_7190-1234.jpg?w=996");
+        }
 
-         .signup-form {
-            width: 500px;
-            margin: 0px auto;
-            padding: 2rem;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-            background-image: url("https://img.freepik.com/premium-photo/blank-green-paper-texture-background_7190-886.jpg?w=996");
-         }
+        .login-container {
+            width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
 
-         .signup-heading {
+        h1 {
             text-align: center;
-            margin-top: 0;
-            margin-bottom: 1.5rem;
-            font-size: 2rem;
-            font-weight: bold;
+            margin-bottom: 20px;
+            font-size: 36px;
             color: #001621c0;
-         }
+        }
 
-         .form-group {
-            margin-bottom: 1.5rem;
-         }
+        .form-group {
+            margin-bottom: 20px;
+        }
 
-         label {
+        label {
             display: block;
+            font-size: 18px;
             font-weight: bold;
-            margin-bottom: 0.5rem;
-         }
+            color: #333;
+            margin-bottom: 5px;
+        }
 
-         input[type="text"],
-         input[type="email"],
-         input[type="password"] {
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            box-sizing: border-box;
+            /* add this to adjust the box-sizing */
+        }
+
+        button[type="submit"] {
             display: block;
             width: 100%;
-            padding: 0.5rem;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-            font-size: 1rem;
-            margin-bottom: 0.5rem;
-         }
-
-         input[type="submit"] {
+            padding: 10px;
             background-color: #001621c0;
             color: #fff;
-            padding: 0.5rem 1rem;
             border: none;
-            border-radius: 3px;
+            border-radius: 5px;
+            font-size: 18px;
             cursor: pointer;
-            font-size: 1rem;
-         }
+        }
 
-         #img {
+        button[type="submit"]:hover {
+            background-color: black;
+        }
+
+        /* add this to create a separate div for the input fields */
+        .form-fields {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #right {
+            display: flex;
+            justify-content: end;
+            margin-top: 7px;
+        }
+
+        #right a {
+            color: #001621c0;
+            text-decoration: none;
+        }
+
+        #right a:hover {
+            color: green;
+            text-decoration: underline;
+        }
+
+        #img {
             width: 20%;
-            /* border: 1px solid black; */
-         }
+           
+        }
 
-         #img img {
+        #img img {
             width: 40%;
             border-radius: 60px;
-         }
+        }
 
-         #shownamediv {
+        #shownamediv {
             text-align: center;
-            /* border: 1px solid black; */
+          
 
-         }
+        }
 
-         #showname {
+        #showname {
             font-family: cursive;
-         }
+        }
 
-         .form-group a {
-            margin-left: 5px;
-            text-decoration: none;
-            color: black;
-         }
-
-         .form-group a:hover {
-            text-decoration: underline;
-            color: green;
-         }
-         
-         section>div{
-            display:flex;
-            justify-content:space-evenly ;
-         }
-
-         #jack{
+        section>div {
             display: flex;
-            justify-content: space-around;
-         }
-         .form-group input:hover {
-           
-            color: black;
-         }
+            justify-content: space-evenly;
+        }
+
+
 
     </style>
 </head>
@@ -250,52 +259,48 @@ body {
 
     <div class=" subcont">
        
-            <div class="signup-form">
-                <h2 class="signup-heading">Sign-Up</h2>
-                <form>
-                   <div class="form-group">
-                      <label for="name">Username:</label>
-                      <input type="text" id="name" name="name" placeholder="Enter your username*" required>
-                   </div>
-                   <div class="form-group">
-                      <label for="email">Email ID:</label>
-                      <input type="email" id="email" name="email" placeholder="Enter your email ID*" required>
-                   </div>
-                   <div class="form-group" id="jane">
-                      <label for="password">Password:</label>
-                      <input type="password" id="password" placeholder="Enter your password*" required>
-                   </div>
-                   <div class="form-group" id="jack">
-                      <input type="submit" value="Sign-Up">
-                      <a href="./signin.html">Sign-In</a>
-                   </div>
-                </form>
-             </div>
+        <div class="login-container">
+            <h1>Sign-In</h1>
+            <form>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Enter your email*" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" placeholder="Enter your password*" name="password" required>
+                </div>
+                <button type="submit">Login</button>
+                <div id="right">
+                    <a href="./signup.html">Sign-Up</a>
+                </div>
+            </form>
+        </div>
        
     </div>
 </body>
 </html>
 <script>
 
-const BaseServerUrl = `http://localhost:8998/`
+const BaseServerUrl =  `http://localhost:8998/`
 
 let formel = document.querySelector("form")
-let nameel = document.getElementById('name')
+
 let emailel = document.getElementById("email")
 let passwordel = document.getElementById("password")
 let showname = document.getElementById("showname")
-
+console.log("object");
 formel.addEventListener("submit", (e) => {
     e.preventDefault()
 
     let obj = {
-        name: nameel.value,
+
         email: emailel.value,
         password: passwordel.value,
 
     }
 
-    fetch(`${BaseServerUrl}users/register`, {
+    fetch(`${BaseServerUrl}users/login`, {
         method: "POST",
         headers: {
             "Content-type": "application/json"
@@ -307,26 +312,55 @@ formel.addEventListener("submit", (e) => {
             return res.json()
         })
         .then((data) => {
-            console.log(data);
+            if (data.msg == "Wrong Credentials") {
+                Swal.fire({
+  icon: 'error',
+  title: 'Oops...',
+  text: 'Wrong Credentials!!',
+  footer: '<a href="">Why do I have this issue?</a>'
+})
 
-            
- 
+} else {
+               
 let timerInterval
 Swal.fire({
-  position: 'center',
-  icon: 'success',
-  title: data.msg,
-  showConfirmButton: false,
-  timer: 1500
+  title: 'Login Successfully',
+  html: 'Connecting people in <b></b> milliseconds.',
+  timer: 2000,
+  timerProgressBar: true,
+  didOpen: () => {
+    Swal.showLoading()
+    const b = Swal.getHtmlContainer().querySelector('b')
+    timerInterval = setInterval(() => {
+      b.textContent = Swal.getTimerLeft()
+    }, 100)
+  },
+  willClose: () => {
+    clearInterval(timerInterval)
+  }
+}).then((result) => {
+ 
+  if (result.dismiss === Swal.DismissReason.timer) {
+    console.log('I was closed by the timer')
+  }
 })
-           
+              
+
+                localStorage.setItem("user",JSON.stringify(data.userdetails))
+                console.log(JSON.stringify(data.userdetails));
+
+                console.log(data.token);
             
-            setTimeout(() => {
-                window.location.href = "signin.html"
-            }, 3000)
-           
+                setTimeout(() => {
+                    window.location.href = "index.html"
+                }, 3000)
+                console.log(data);
+            }
+
+
+
         }).catch((err) => {
-           data.msg
+            console.log(err);
         })
 })
 
