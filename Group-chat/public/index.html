@@ -56,17 +56,45 @@
             <div class="box chats">
                 <div class="data">
                     <div class="chatlist">
-                        <div class="block" onclick="window.location.href='chatOne.html'">
+                        <div class="block" id="block">
                             <div class="imgbx">
-                                <img src="https://img.freepik.com/free-icon/user_318-804790.jpg" alt="">
+                                <img src="/img/WhatsApp Image 2023-05-08 at 5.56.33 PM.jpeg" alt="">
                             </div>
                             <div class="details">
                                 <div class="listhead">
-                                    <h4>Chandan Kumar</h4>
+                                    <h4 class="name">Chandan Kumar</h4>
                                     <p class="time">12:56</p>
                                 </div>
                                 <div class="message_p">
                                     <p>Hello brother I need your urgent help</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block" id="block2">
+                            <div class="imgbx">
+                                <img src="/img/WhatsApp Image 2023-05-08 at 5.56.48 PM.jpeg" alt="">
+                            </div>
+                            <div class="details">
+                                <div class="listhead">
+                                    <h4 class="name2">Avinaw Kumar</h4>
+                                    <p class="time">11:11</p>
+                                </div>
+                                <div class="message_p">
+                                    <p>Can you help me in today's coding assignment?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block" id="block3">
+                            <div class="imgbx">
+                                <img src="/img/Krunal.png" alt="">
+                            </div>
+                            <div class="details">
+                                <div class="listhead">
+                                    <h4 class="name3">Krunal A. Gurao</h4>
+                                    <p class="time">10:22</p>
+                                </div>
+                                <div class="message_p">
+                                    <p>Brother how much you got in today's DSA evaluation?</p>
                                 </div>
                             </div>
                         </div>
@@ -80,7 +108,7 @@
                         <div class="chatlist">
                             <div class="block">
                                 <div class="imgbx">
-                                    <img src="/img/pic.jpg" alt="">
+                                    <img src="/img/Vartalap-1 (3).png" alt="">
                                 </div>
                                 <div class="details">
                                     <div class="listhead">
@@ -94,7 +122,7 @@
                             </div>
                             <div class="block">
                                 <div class="imgbx">
-                                    <img src="/img/pic.jpg" alt="">
+                                    <img src="/img/101.png" alt="">
                                 </div>
                                 <div class="details">
                                     <div class="listhead">
@@ -108,7 +136,7 @@
                             </div>
                             <div class="block">
                                 <div class="imgbx">
-                                    <img src="/img/pic.jpg" alt="">
+                                    <img src="/img/201.png" alt="">
                                 </div>
                                 <div class="details">
                                     <div class="listhead">
@@ -162,11 +190,11 @@
                         <label for="">Recent Updates</label>
                         <div class="block unseen">
                             <div class="imgbx">
-                                <img src="/img/pic.jpg" alt="">
+                                <img src="/img/mern.webp" alt="">
                             </div>
                             <div class="details">
                                 <div class="listhead">
-                                    <h4>Chandan Kumar</h4>
+                                    <h4>Mangalam Kumar</h4>
                                    
                                 </div>
                                 <div class="message_p">
@@ -177,11 +205,11 @@
                         <label for="">Viewed Updates</label>
                         <div class="block seen">
                             <div class="imgbx">
-                                <img src="/img/pic.jpg" alt="">
+                                <img src="/img/mern2.png" alt="">
                             </div>
                             <div class="details">
                                 <div class="listhead">
-                                    <h4>Chandan Kumar</h4>
+                                    <h4>Rutuja Deshmukh</h4>
                                    
                                 </div>
                                 <div class="message_p">
@@ -212,7 +240,7 @@
                         <label for="">Recent</label>
                         <div class="block">
                             <div class="imgbx">
-                                <img src="/img/pic.jpg" alt="">
+                                <img src="/img/WhatsApp Image 2023-05-08 at 5.56.33 PM.jpeg" alt="">
                             </div>
                             <div class="details">
                                 <div class="listhead">
@@ -227,11 +255,11 @@
                         </div>
                         <div class="block">
                             <div class="imgbx">
-                                <img src="/img/pic.jpg" alt="">
+                                <img src="/img/WhatsApp Image 2023-05-08 at 5.56.48 PM.jpeg" alt="">
                             </div>
                             <div class="details">
                                 <div class="listhead">
-                                    <h4>Chandan Kumar</h4>
+                                    <h4>Avinaw Kumar</h4>
                                    
                                 </div>
                                 <div class="message_p outgoing">
@@ -269,6 +297,30 @@
   } catch (error) {
     console.log(error)
   }
+})
+
+let block=document.getElementById("block")
+let block2=document.getElementById("block2")
+let block3=document.getElementById("block3")
+block.addEventListener("click",()=>{
+    let name =document.querySelector(".name")
+let username=name.innerText;
+console.log(username)
+localStorage.setItem("username",username)
+})
+
+block2.addEventListener("click",()=>{
+    let name =document.querySelector(".name2")
+let username=name.innerText;
+console.log(username)
+localStorage.setItem("username",username)
+})
+
+block3.addEventListener("click",()=>{
+    let name =document.querySelector(".name3")
+let username=name.innerText;
+console.log(username)
+localStorage.setItem("username",username)
 })
 
 
