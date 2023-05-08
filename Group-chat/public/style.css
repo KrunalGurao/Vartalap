@@ -14,65 +14,18 @@ body{
     background: #f2eadf;
 }
 :root{
-    --main:#327d7d;
+    --main:rgb(8, 107, 91);
     --white:white;
 }
 /* ---------------------------- */
-input {
-    outline: none;
-  }
-  
-  input[type=search] {
-    -webkit-appearance: textfield;
-    -webkit-box-sizing: content-box;
-    font-family: inherit;
-    font-size: 18px;
-  }
-  
-  input::-webkit-search-decoration,
-  input::-webkit-search-cancel-button {
-    display: none;
-  }
-  
-  input[type=search] {
-    /* background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center; */
-    border: solid 1px #ccc;
-    padding: 2px 4px;
-    width: 75px;
-    -webkit-border-radius: 10em;
-    -moz-border-radius: 10em;
-    border-radius: 10em;
-    -webkit-transition: all .5s;
-    -moz-transition: all .5s;
-    transition: all .5s;
-  }
-  
-  input[type=search]:focus {
-    width: 230px;
-    background-color: #fff;
-    border-color: #66CC75;
-    -webkit-box-shadow: 0 0 5px rgba(109, 207, 246, .5);
-    -moz-box-shadow: 0 0 5px rgba(109, 207, 246, .5);
-    box-shadow: 0 0 5px rgba(109, 207, 246, .5);
-  }
-  
-  input:-moz-placeholder {
-    color: #999;
-  }
-  
-  input::-webkit-input-placeholder {
-    color: #999;
-  }
-  
-  #myForm {
-    position: relative;
-    width: 160px;
-  }
-  
-  #myForm input[type=search] {
-    position: absolute;
-    right: 0;
-  }
+.profile{
+    width: 45px;
+    height: 45px;
+    text-align: right;
+    border-radius: 50%;
+    margin-right: 25px;
+}
+    
 /* --------------------- */
 .dropbtn {
     color: var(--white);
@@ -126,7 +79,7 @@ header{
     background:var(--main);
     padding: 20px 10px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 .img{
@@ -144,7 +97,11 @@ header .action a{
     display: flex;
     text-decoration: none;
 }
-.tabs input{
+/* .tabs input{
+    visibility: hidden;
+    display: none;
+} */
+#chats,#group,#status,#calls{
     visibility: hidden;
     display: none;
 }
@@ -396,3 +353,78 @@ header .action a{
     border-radius: 50%;
     font-size: 0.75em;
 }
+
+
+/* --------------------- */
+.aaa{
+    display: flex;
+    justify-content: space-evenly;
+}
+.join-container {
+  width: 30%;
+  
+  margin: 80px auto;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11), 0 2px 2px rgba(0, 0, 0, 0.11),
+    0 4px 4px rgba(0, 0, 0, 0.11), 0 8px 8px rgba(0, 0, 0, 0.11),
+    0 16px 16px rgba(0, 0, 0, 0.11), 0 32px 32px rgba(0, 0, 0, 0.11);
+}
+
+.join-header {
+  text-align: center;
+  padding: 20px;
+  background: var(--dark-color-a);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.logo-img {
+  margin-bottom: -8px;
+  margin-right: 10px;
+}
+
+.join-main {
+    border-radius: 20px;
+    height: 100%;
+  padding: 30px 40px;
+  background: rgb(45, 46, 46);
+}
+
+.join-main p {
+  margin-bottom: 20px;
+}
+
+.join-main .form-control {
+  margin-bottom: 20px;
+}
+
+.join-main label {
+  display: block;
+  margin-bottom: 5px;
+  color: white;
+  font-size: 20px;
+}
+
+.join-main input[type="text"] {
+  font-size: 16px;
+  padding: 5px;
+  height: 40px;
+  width: 100%;
+}
+
+.join-main select {
+  font-size: 16px;
+  padding: 5px;
+  height: 40px;
+  width: 100%;
+}
+
+.join-main .btn {
+  margin-top: 20px;
+  width: 100%;
+  background-color: #6e7171;
+  border-radius: 0%;
+}
+ 
+  

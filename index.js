@@ -47,6 +47,7 @@ app.use('/admin', adminRouter);
 
 
 const http = require("http");
+
 const socketio = require('socket.io');
 
 const { chatting } = require('./configs/chatting');
@@ -54,8 +55,10 @@ const { chatting } = require('./configs/chatting');
 
 
 // using http server because express server doesnt support socket.io
+
 const serverHttp = http.createServer(app)
 const io = socketio(serverHttp); // with wss we are attaching http server
+
 chatting(io); // using the imported chatting function and passing io instance/ object 
 
 
