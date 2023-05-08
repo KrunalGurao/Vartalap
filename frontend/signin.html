@@ -312,8 +312,10 @@ formel.addEventListener("submit", (e) => {
             return res.json()
         })
         .then((data) => {
-            if (data.msg == "Wrong Credentials") {
-                Swal.fire({
+            
+            if (data.msg == "Wrong Credentials") 
+            {
+    Swal.fire({
   icon: 'error',
   title: 'Oops...',
   text: 'Wrong Credentials!!',
@@ -347,12 +349,14 @@ Swal.fire({
               
 
                 localStorage.setItem("user",JSON.stringify(data.userdetails))
+                localStorage.setItem("token",JSON.stringify(data.token))
                 console.log(JSON.stringify(data.userdetails));
+                
 
                 console.log(data.token);
             
                 setTimeout(() => {
-                    window.location.href = "index.html"
+                    window.location.href = "./frontend/"
                 }, 3000)
                 console.log(data);
             }
