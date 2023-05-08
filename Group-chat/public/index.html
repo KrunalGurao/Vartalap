@@ -56,7 +56,7 @@
             <div class="box chats">
                 <div class="data">
                     <div class="chatlist">
-                        <div class="block" id="block">
+                        <div class="block" id="block" onclick="direct()">
                             <div class="imgbx">
                                 <img src="/img/WhatsApp Image 2023-05-08 at 5.56.33 PM.jpeg" alt="">
                             </div>
@@ -70,7 +70,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="block" id="block2">
+                        <div class="block" id="block2" onclick="direct()">
                             <div class="imgbx">
                                 <img src="/img/WhatsApp Image 2023-05-08 at 5.56.48 PM.jpeg" alt="">
                             </div>
@@ -84,7 +84,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="block" id="block3">
+                        <div class="block" id="block3" onclick="direct()">
                             <div class="imgbx">
                                 <img src="/img/Krunal.png" alt="">
                             </div>
@@ -322,6 +322,11 @@ let username=name.innerText;
 console.log(username)
 localStorage.setItem("username",username)
 })
+
+
+function direct(){
+    window.location.href="/./chatting.html"
+}
 
 
 
