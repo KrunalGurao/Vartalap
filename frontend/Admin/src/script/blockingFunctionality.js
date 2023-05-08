@@ -29,9 +29,15 @@ const display = async ()=>{
         }
     })
     if(!admin.ok){
-        alert("Login Again");
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Something went wrong!'
+          })
         localStorage.clear();
-        window.location.href = 'login.html';
+        setTimeout(()=>{
+            window.location.href = 'login.html';
+        }, 2500);
     }else{
         admin = await admin.json();
         localStorage.setItem('admin', admin.name);
@@ -76,8 +82,9 @@ const blockingStatus = async(id)=>{
             Authorization: `Bearer ${token}`
         }
     })
-    if(res.ok)
-    fillContainer();
+    if(res.ok){
+        fillContainer();
+    }
 }
 
 const unblockingStatus = async(id)=>{
@@ -87,8 +94,14 @@ const unblockingStatus = async(id)=>{
             Authorization: `Bearer ${token}`
         }
     })
-    if(res.ok)
-    fillContainer();
+    if(res.ok) fillContainer();
+    else{
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Something went wrong!'
+          })
+    }
 }
 
 
@@ -128,14 +141,21 @@ const checkingBlockStatus = (status, id)=>{
 logoutBtn.addEventListener('click', async ()=>{
     let result = await fetch(`${baseServerUrl}/logout`, {headers: {Authorization: `Bearer ${token}`}})
     if(result.ok){
+        Swal.fire('Logout Successful');
         localStorage.removeItem('admin');
         localStorage.removeItem('token');
         localStorage.removeItem('email');
         localStorage.removeItem('role');
         localStorage.removeItem('icon');
-        window.location.href = 'login.html';
+        setTimeout(()=>{
+            window.location.href = 'login.html';
+        }, 2500);
     }else{
-        alert('Something went wrong');
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Something went wrong!'
+          })
     }
 })
 

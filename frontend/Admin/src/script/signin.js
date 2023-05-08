@@ -27,8 +27,11 @@ const signin = async (obj) => {
         method: 'POST'
     })
     if (res.ok) {
+        Swal.fire('Login Successful')
         res = await res.json();
-        window.location.href = `http://127.0.0.1:5500?${JSON.stringify(res.access_token)}`
+        setTimeout(()=>{
+            window.location.href = `http://127.0.0.1:5500?${JSON.stringify(res.access_token)}`
+        }, 2500)
     }
 }
 (() => {

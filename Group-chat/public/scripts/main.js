@@ -3,6 +3,7 @@ const chatForm = document.getElementById("chat-form");
 const chatMessages = document.querySelector(".chat-messages");
 const roomName = document.getElementById("room-name");
 const  userList = document.getElementById("users");
+const button=document.querySelector(".button")
 
 const urlParams =  new URLSearchParams(window.location.search)
 
@@ -20,6 +21,28 @@ socket.on("message",(message)=>{
     outputMessage(message);
 
 })
+
+
+
+
+socket.on("roomUsers",({room,users})=>{
+
+    roomName.innerText= room;
+    outputRoomUsers(users)
+
+})
+
+
+function outputRoomUsers(users){
+    
+    userList.innerHTML = '';
+
+    users.forEach(user => {
+        const li = document.createElement("li");
+        li.innerText = user.username;
+        userList.appendChild(li)
+    });
+}
 
 
 
@@ -42,32 +65,13 @@ chatForm.addEventListener("submit",(e)=>{
 
 })
 
-socket.on("roomUsers",({room,users})=>{
-
-    roomName.innerText= room;
-
-outputRoomUsers(users)
-
-})
-
-
-function outputRoomUsers(users){
-    
-    userList.innerHTML = '';
-
-    users.forEach(user => {
-        const li = document.createElement("li");
-        li.innerText = user.username;
-        userList.appendChild(li)
-    });
-}
-
 //outPut message
 
 function outputMessage(message){
 
     const div = document.createElement("div");
     div.classList.add("message");
+    
 
     const p = document.createElement("p");
 
@@ -75,7 +79,7 @@ function outputMessage(message){
 
     p.innerText = message.username;
 
-    p.innerHTML += `<span>${message.time}</span>`;
+    p.innerHTML += `<span>  ${message.time}</span>`;
 
     div.appendChild(p);
 
@@ -90,3 +94,7 @@ function outputMessage(message){
     
 
 }
+
+button.addEventListener("click",()=>{
+    window.location.href="index.html"
+})

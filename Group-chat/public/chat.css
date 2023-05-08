@@ -58,8 +58,8 @@ a {
 /* Chat Page */
 
 .chat-container {
-  max-width: 900px;
-  margin: 30px auto;
+  max-width: 95%;
+  margin: 0 auto;
   overflow: hidden;
   border-radius: 10px;
 }
@@ -111,27 +111,30 @@ a {
   padding: 30px;
  height: 400px;
   overflow-y: scroll;
-  background-color: black;
+  background: url(Images/background.jpg);
 }
 
+
 .chat-messages .message {
+  width: 100%;
   padding: 10px;
   margin-bottom: 15px;
   border-radius: 5px;
-  background-color: #f5f5f5;
+  background-color: #dadada;
 }
 
 .chat-messages .message .meta {
   font-size: 15px;
   font-weight: bold;
-  color: #370F08;
+  color: #004314;
   opacity: 0.7;
   margin-bottom: 7px;
 }
 
 .chat-messages .message .meta span {
-  color: #777;
+  color: #000000;
 }
+
 
 .chat-form-container {
   padding: 20px 0;
@@ -161,3 +164,5 @@ a {
   width: 150px;
   height: 90%;
 }
+
+/* ---------------------------- */
