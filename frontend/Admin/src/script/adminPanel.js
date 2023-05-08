@@ -34,9 +34,11 @@ const display = async ()=>{
         }
     })
     if(!admin.ok){
-        alert("Login Again");
+        Swal.fire('Working fine')
         localStorage.clear();
-        window.location.href = 'login.html';
+        setTimeout(()=>{
+            window.location.href = 'login.html';
+        }, 5500);
     }else{
         admin = await admin.json();
         localStorage.setItem('admin', admin.name);
