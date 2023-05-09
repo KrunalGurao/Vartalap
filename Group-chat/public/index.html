@@ -280,7 +280,7 @@
     let logout=document.querySelector(".logout");
     let userAuthToken= localStorage.getItem("token") || null;
     
-    let baseServerURL= "http://localhost:8998"
+    let baseServerURL= "https://harsh-sand-4950-production.up.railway.app"
    
     logout.addEventListener("click", async () =>{
   try {
@@ -292,7 +292,7 @@
       }
     });
     // let data = await res.json();
-    window.location.href= "../../frontend/signin.html"
+    window.location.href= "../../frontend/User/signin.html"
     
   } catch (error) {
     console.log(error)
