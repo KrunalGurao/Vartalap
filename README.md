@@ -20,13 +20,13 @@ Admin-Page:- https://adminside-production.up.railway.app/login.html
 ## Completed a group project within a span of five days:
 [Krunal Arun Kumar Gurao](https://github.com/KrunalGurao) (Team Lead) (Handled the Sign-In/Sign-Up part)
 <br>
-[Chandan Kumar](https://github.com/Chandan2812) (Handled group chat part)
+[Chandan Kumar](https://github.com/Chandan2812) (Handled the group chat part)
 <br>
-[Mangalam Kumar](https://github.com/Abhi0049k)  (Handled admin part)
+[Mangalam Kumar](https://github.com/Abhi0049k)  (Handled the admin part)
 <br>
-[Avinaw Kumar](https://github.com/Avinawkumar)  (Handled home page part)
+[Avinaw Kumar](https://github.com/Avinawkumar)  (Handled the home page part)
 <br>
-[Rutuja Deshmukh](https://github.com/Rutujadd27)  (Handled private chat part)
+[Rutuja Deshmukh](https://github.com/Rutujadd27)  (Handled the private chat part)
 <br>
 
 
