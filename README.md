@@ -1,16 +1,21 @@
-# harsh-sand-4950
-
-
 # Vartalap
 
-This is a chatting website where user can chat with individual person or can chat in a group
+Web application for message exchange with users.
 
+## Live Links:-
+Vartalap:- https://soft-alpaca-263d2d.netlify.app/frontend/user/signup
+<br>
+Group-Chat:- https://clever-praline-b83f90.netlify.app/public/
+<br>
+Admin-Page:- https://adminside-production.up.railway.app/login.html
 
 ## Tech Stack
 
- HTML, CSS, JavaScript, MongoDB
+ Frontend:- HTML, CSS, JavaScript, Bootstrap.
 
- Node, Express
+ Backend:- Node.js, Express.js, Mongoose.js, Socket.io
+ 
+ Database:- MongoDB
 
 
 ## Login
@@ -48,10 +53,3 @@ This is a chatting website where user can chat with individual person or can cha
 
 ## Admin Home Page
 
-
-## Live Links:-
-Vartalap:- https://soft-alpaca-263d2d.netlify.app/frontend/user/signup
-<br>
-Group-Chat:- https://clever-praline-b83f90.netlify.app/public/
-<br>
-Admin-Page:- https://adminside-production.up.railway.app/login.html
