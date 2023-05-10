@@ -50,7 +50,7 @@ This is a chatting website where user can chat with individual person or can cha
 
 
 ## Live Links:-
-Vartalap:- https://scintillating-eclair-46f8cb.netlify.app/frontend/user/signup.html
+Vartalap:- https://soft-alpaca-263d2d.netlify.app/frontend/user/signup
 <br>
 Group-Chat:- https://stirring-pavlova-0ab3b6.netlify.app/public/index.html
 <br>
