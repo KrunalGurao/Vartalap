@@ -30,11 +30,11 @@ Admin-Page:- https://adminside-production.up.railway.app/login.html
 <br>
 
 
-## Sign-Up
+## Sign-Up Page
 
 ![screenshot (1)](https://user-images.githubusercontent.com/108578299/237056914-e40697f9-7ceb-4740-a7d8-1ba2b89a00db.png)
 
-## Sign-In
+## Sign-In Page
 
 ![screenshot](https://user-images.githubusercontent.com/108578299/237056666-d0bd548f-c261-4d74-a485-697f3815a592.png)
 
