@@ -54,4 +54,4 @@ Vartalap:- https://scintillating-eclair-46f8cb.netlify.app/frontend/user/signup.
 <br>
 Group-Chat:- https://stirring-pavlova-0ab3b6.netlify.app/public/index.html
 <br>
-Admin-Page:- 
+Admin-Page:- https://adminside-production.up.railway.app/login.html
