@@ -1,4 +1,4 @@
-# Vartalap
+# VARTALAP
 
 Web application for message exchange with users.
 
@@ -17,21 +17,31 @@ Admin-Page:- https://adminside-production.up.railway.app/login.html
  
  Database:- MongoDB
 
+## Completed a group project within a span of five days:
+[Krunal Arun Kumar Gurao](https://github.com/KrunalGurao) (Team Lead) (Handled the Sign-In/Sign-Up part)
+<br>
+[Chandan Kumar](https://github.com/Chandan2812) (Handled group chat part)
+<br>
+[Mangalam Kumar](https://github.com/Abhi0049k)  (Handled admin part)
+<br>
+[Avinaw Kumar](https://github.com/Avinawkumar)  (Handled home page part)
+<br>
+[Rutuja Deshmukh](https://github.com/Rutujadd27)  (Handled private chat part)
+<br>
 
-## Login
+
+## Sign-Up
+
+![screenshot (1)](https://user-images.githubusercontent.com/108578299/237056914-e40697f9-7ceb-4740-a7d8-1ba2b89a00db.png)
+
+## Sign-In
 
 ![screenshot](https://user-images.githubusercontent.com/108578299/237056666-d0bd548f-c261-4d74-a485-697f3815a592.png)
 
-## Signup
-
-
-![screenshot (1)](https://user-images.githubusercontent.com/108578299/237056914-e40697f9-7ceb-4740-a7d8-1ba2b89a00db.png)
 
 ## Home Page
 
 ![screenshot (2)](https://user-images.githubusercontent.com/108578299/237057560-9b3ab8db-d3ca-479d-a4af-fd0921493e4d.png)
-
-
 
 ![screenshot (3)](https://user-images.githubusercontent.com/108578299/237057918-264893a0-81bd-47f7-88da-d7a550e71052.png)
 
@@ -39,7 +49,7 @@ Admin-Page:- https://adminside-production.up.railway.app/login.html
 
 ![screenshot (5)](https://user-images.githubusercontent.com/108578299/237057817-d41f5ab7-168a-48a1-aa73-8da5ec70a07a.png)
 
-## Individual Chat Page
+## Private Chat Page
 
 ![screenshot (6)](https://user-images.githubusercontent.com/108578299/237059057-e50e54dd-d7fd-4f46-99a7-57a9d7973d07.png)
 
