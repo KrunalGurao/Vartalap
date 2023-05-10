@@ -18,7 +18,7 @@ Admin-Page:- https://adminside-production.up.railway.app/login.html
  Database:- MongoDB
 
 ## Completed a group project within a span of five days:
-[Krunal Arun Kumar Gurao](https://github.com/KrunalGurao) (Team Lead) (Handled the Sign-In/Sign-Up part)
+[Krunal Arun Kumar Gurao](https://github.com/KrunalGurao) (Team Lead) (Handled the Sign-Up/Sign-In part)
 <br>
 [Chandan Kumar](https://github.com/Chandan2812) (Handled the group chat part)
 <br>
