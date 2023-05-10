@@ -50,7 +50,7 @@ const adminAuth = async (req, res) => {
         const access_token = jwt.sign({ userId: isUserValid._id }, process.env.JWT_SECRET_KEY, { expiresIn: '4h' });
         isUserValid.token = access_token;
         const queryString = JSON.stringify(access_token);
-        res.redirect(`http://127.0.0.1:5500?${queryString}`);
+        res.redirect(`https://adminside-production.up.railway.app?${queryString}`);
     }
     else
         res.status(400).send({ msg: "You are not authorized" });
