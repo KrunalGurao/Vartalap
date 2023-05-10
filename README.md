@@ -52,6 +52,6 @@ This is a chatting website where user can chat with individual person or can cha
 ## Live Links:-
 Vartalap:- https://soft-alpaca-263d2d.netlify.app/frontend/user/signup
 <br>
-Group-Chat:- https://stirring-pavlova-0ab3b6.netlify.app/public/index.html
+Group-Chat:- https://clever-praline-b83f90.netlify.app/public/
 <br>
 Admin-Page:- https://adminside-production.up.railway.app/login.html
