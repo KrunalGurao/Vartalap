@@ -59,6 +59,63 @@ const { chatting } = require('./configs/chatting');
 const serverHttp = http.createServer(app)
 const io = socketio(serverHttp); // with wss we are attaching http server
 
+// const ioG = socketio(serverHttp);
+
+
+// // const defaultNPS = io.of("/");
+
+// ioG.on("connection",(socket)=>{
+
+//     console.log("One user has joined");
+
+//     socket.on("joinRoom",({username,room})=>{
+
+//       const user = userJoin(socket.id, username, room);
+
+//       socket.join(user.room);
+
+//       // Welcome message 
+//       socket.emit("message",formateMessage("Vartalap",`Welcome to ${room}`));
+
+//       // Broadcasting other users
+//       socket.broadcast.to(user.room).emit("message",formateMessage("Vartalap",`${username} has joined the chat`));
+
+//       // getting room users.
+//          ioG.to(room).emit("roomUsers",{
+//             room:user.room,
+//             users:getRoomUsers(user.room)
+//          })
+//     });
+
+//      socket.on("chatMessage",(msg)=>{
+//         const user = getCurrentUser(socket.id);
+
+//         ioG.to(user.room).emit("message",formateMessage(user.username,msg));
+
+//      });
+
+    
+//     socket.on("disconnect",()=>{
+
+//     const user = userLeave(socket.id);
+//         console.log("one user left");
+
+//           // Broadcastion other users on leaving 
+//        ioG.to(user.room).emit("message",formateMessage("Masai Server",`${user.username} has left the chat`));
+ 
+//        // getting room users.
+//   ioG.to(user.room).emit("roomUsers",{
+//     room:user.room,
+//     users:getRoomUsers(user.room)
+//  })
+ 
+//         })
+
+  
+
+// })
+
+
 chatting(io); // using the imported chatting function and passing io instance/ object 
 
 
