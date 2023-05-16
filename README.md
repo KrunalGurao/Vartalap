@@ -39,7 +39,7 @@ Admin-Page:- https://adminside-production.up.railway.app/login.html
 ![screenshot](https://user-images.githubusercontent.com/108578299/237056666-d0bd548f-c261-4d74-a485-697f3815a592.png)
 
 
-## Home Page
+## Home Pages
 
 ![screenshot (2)](https://user-images.githubusercontent.com/108578299/237057560-9b3ab8db-d3ca-479d-a4af-fd0921493e4d.png)
 
