@@ -1,4 +1,4 @@
-const baseServerUrl = 'http://localhost:8998/admin'
+const baseServerUrl = 'https://chat-app-2pe3.onrender.com/admin'
 
 const formEl = document.querySelector('#formEl');
 const nameEl = document.querySelector('#validationCustom01')
@@ -15,7 +15,7 @@ formEl.addEventListener('submit', (evnt) => {
 })
 
 googleBtn.addEventListener('click', async ()=>{
-    window.location.href = 'http://localhost:8998/admin/auth/google'
+    window.location.href = 'https://chat-app-2pe3.onrender.com/admin/auth/google'
 })
 
 const signin = async (obj) => {
@@ -30,7 +30,7 @@ const signin = async (obj) => {
         Swal.fire('Login Successful')
         res = await res.json();
         setTimeout(()=>{
-            window.location.href = `http://127.0.0.1:5500?${JSON.stringify(res.access_token)}`
+            window.location.href = `/frontend/Admin/index.html/${JSON.stringify(res.access_token)}`
         }, 2500)
     }
 }

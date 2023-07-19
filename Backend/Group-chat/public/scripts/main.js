@@ -12,7 +12,7 @@ const room = urlParams.get("room");
 
 
 
-const socket = io("https://harsh-sand-4950-production.up.railway.app/",{transports:["websocket"]});
+const socket = io("https://chat-app-2pe3.onrender.com/",{transports:["websocket"]});
 
 socket.emit("joinRoom",({username,room}));
 
