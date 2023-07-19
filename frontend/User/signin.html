@@ -282,7 +282,7 @@ body {
 </html>
 <script>
 
-const BaseServerUrl =  `https://harsh-sand-4950-production.up.railway.app/`
+const BaseServerUrl =  `https://chat-app-2pe3.onrender.com/`
 
 let formel = document.querySelector("form")
 
@@ -356,7 +356,8 @@ Swal.fire({
                 console.log(data.token);
             
                 setTimeout(() => {
-                    window.location.href = "/Group-chat/public/index.html"
+                    window.location.href = "../../Backend/Group-chat/public/index.html"
+                    
                 }, 3000)
                 console.log(data);
             }
