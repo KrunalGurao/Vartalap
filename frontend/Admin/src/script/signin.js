@@ -15,7 +15,7 @@ formEl.addEventListener('submit', (evnt) => {
 })
 
 googleBtn.addEventListener('click', async ()=>{
-    window.location.href = 'https://chat-app-2pe3.onrender.com/admin/auth/google'
+    // window.location.href = 'https://chat-app-2pe3.onrender.com/admin/auth/google'
 })
 
 const signin = async (obj) => {
@@ -29,9 +29,10 @@ const signin = async (obj) => {
     if (res.ok) {
         Swal.fire('Login Successful')
         res = await res.json();
+        localStorage.setItem('token', res.access_token);
         setTimeout(()=>{
-            window.location.href = `/frontend/Admin/index.html/${JSON.stringify(res.access_token)}`
-        }, 2500)
+            window.location.href = `./index.html`
+        }, 1500)
     }
 }
 (() => {

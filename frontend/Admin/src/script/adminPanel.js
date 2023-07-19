@@ -7,13 +7,10 @@ const trafficContainer = document.querySelector('#trafficContainer');
 const ctx = document.getElementById('myChart').getContext('2d');
 const loading = document.getElementById('loading');
 const twoMostUsedRoutes = document.querySelector('.routeContainer');
-const queryString = window.location.search;
-let urlParams = decodeURIComponent(queryString);
-localStorage.getItem('token')||localStorage.setItem('token', urlParams.split('"')[1]);
 
 setTimeout(()=>{
     loading.style.display = 'none'
-}, 3000);
+}, 1500);
 
 const token = localStorage.getItem('token');
 window.addEventListener('load', ()=>{
@@ -38,7 +35,7 @@ const display = async ()=>{
         localStorage.clear();
         setTimeout(()=>{
             window.location.href = 'login.html';
-        }, 5500);
+        }, 3000);
     }else{
         admin = await admin.json();
         localStorage.setItem('admin', admin.name);
@@ -57,9 +54,7 @@ const twoStar = async ()=>{
         }
     })
     data = await data.json();
-    console.log(data);
     let arr = data.map(mostTraffic)
-    console.log(arr.join('\n'));
     twoMostUsedRoutes.innerHTML = arr.join('\n');
 }
 

@@ -4,13 +4,10 @@ const spanEl = document.querySelector('#welcomeMsg');
 const logoutBtn = document.querySelector('#logoutFn');
 const container = document.querySelector('#adminList');
 const loading = document.querySelector('#loading');
-const queryString = window.location.search;
-let urlParams = decodeURIComponent(queryString);
-localStorage.getItem('token')||localStorage.setItem('token', urlParams.split('"')[1]);
 
 setTimeout(()=>{
     loading.style.display = 'none'
-}, 3000);
+}, 1500);
 
 const token = localStorage.getItem('token');
 window.addEventListener('load', ()=>{
@@ -37,7 +34,7 @@ const display = async ()=>{
         localStorage.clear();
         setTimeout(()=>{
             window.location.href = 'login.html';
-        }, 2500);
+        }, 1500);
     }else{
         admin = await admin.json();
         localStorage.setItem('admin', admin.name);
@@ -149,7 +146,7 @@ logoutBtn.addEventListener('click', async ()=>{
         localStorage.removeItem('icon');
         setTimeout(()=>{
             window.location.href = 'login.html';
-        }, 2500);
+        }, 1500);
     }else{
         Swal.fire({
             icon: 'error',
