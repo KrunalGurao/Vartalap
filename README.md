@@ -7,7 +7,7 @@ Vartalap:- https://soft-alpaca-263d2d.netlify.app/frontend/user/signup
 <br>
 Group-Chat:- https://clever-praline-b83f90.netlify.app/public/
 <br>
-Admin-Page:- https://adminside-production.up.railway.app/login.html
+Admin-Page:- https://bespoke-brioche-8510ee.netlify.app/
 
 ## Tech Stack
 
