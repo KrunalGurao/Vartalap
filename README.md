@@ -64,3 +64,7 @@ Admin-Page:- https://bespoke-brioche-8510ee.netlify.app/
 ## Admin Home Page
 ![9](https://github.com/KrunalGurao/harsh-sand-4950/assets/119415708/6f22bda4-6d6d-4f87-a53d-55bbfab813de)
 
+
+admin Credentials: 
+krunalgurao1@gmail.com
+krunal
