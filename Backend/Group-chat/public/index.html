@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,323 +13,325 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 </head>
+
 <body>
-   <div class="container">
-    <header>
-        <a href="#" class="logo">
-            <img src="Images/logo.jpg" alt="" class="img">
-        </a>
-        <div class="action">
-            <div class="dropdown">
-            <a href="#" class="dropbtn"><img class="profile" src="https://img.freepik.com/free-icon/user_318-804790.jpg" alt=""></a>
-            <div class="dropdown-content">
-                <a href="#"><ion-icon name="person-sharp"></ion-icon>&nbsp Profile</a>
-                <a href="#"><ion-icon name="settings-sharp"></ion-icon>&nbsp Setting</a>
-                <a href="#"><ion-icon name="information-circle-sharp"></ion-icon>&nbsp Help</a>
-                <a href="#" class="logout"><ion-icon name="log-out-sharp"></ion-icon>&nbsp Logout</a>
-            </div></div>
-        </div>
-    </header>
-    <div class="tabs">
-        <input type="radio" id="chats" name="group" checked>
-        <input type="radio" id="group" name="group">
-        <input type="radio" id="status" name="group">
-        <input type="radio" id="calls" name="group">
-        <div class="buttons">
-            <label for="chats" id="size"><ion-icon name="person-circle-outline"></ion-icon></label>
-            <label for="group" id="size"><ion-icon name="people-circle-outline"></ion-icon></label>
-            <label for="status">Status</label>
-            <label for="calls">Calls</label>
-            <div class="underline"></div>
-        </div>
-
-        <div class="quickbtn">
-            <div class="btn message"><ion-icon name="add-circle"></ion-icon></div>
-            <div class="btn message"><ion-icon name="add-circle"></ion-icon></div>
-            <div class="btn camera">
-                <div class="pencil"><ion-icon name="pencil"></ion-icon></div>
-                <ion-icon name="camera"></ion-icon>
+    <div class="container">
+        <header>
+            <a href="#" class="logo">
+                <img src="Images/logo.jpg" alt="" class="img">
+            </a>
+            <div class="action">
+                <div class="dropdown">
+                    <a href="#" class="dropbtn"><img class="profile"
+                            src="https://img.freepik.com/free-icon/user_318-804790.jpg" alt=""></a>
+                    <div class="dropdown-content">
+                        <a href="#"><ion-icon name="person-sharp"></ion-icon>&nbsp Profile</a>
+                        <a href="#"><ion-icon name="settings-sharp"></ion-icon>&nbsp Setting</a>
+                        <a href="#"><ion-icon name="information-circle-sharp"></ion-icon>&nbsp Help</a>
+                        <a href="#" class="logout"><ion-icon name="log-out-sharp"></ion-icon>&nbsp Logout</a>
+                    </div>
+                </div>
             </div>
-            <div class="btn call"><ion-icon name="call"></ion-icon></div>
-        </div>
+        </header>
+        <div class="tabs">
+            <input type="radio" id="chats" name="group" checked>
+            <input type="radio" id="group" name="group">
+            <input type="radio" id="status" name="group">
+            <input type="radio" id="calls" name="group">
+            <div class="buttons">
+                <label for="chats" id="size"><ion-icon name="person-circle-outline"></ion-icon></label>
+                <label for="group" id="size"><ion-icon name="people-circle-outline"></ion-icon></label>
+                <label for="status">Status</label>
+                <label for="calls">Calls</label>
+                <div class="underline"></div>
+            </div>
 
-        <div class="content">
-            <div class="box chats">
-                <div class="data">
-                    <div class="chatlist">
-                        <div class="block" id="block" onclick="direct()">
-                            <div class="imgbx">
-                                <img src="/Backend//img//chandan.jpeg" alt="">
-                            </div>
-                            <div class="details">
-                                <div class="listhead">
-                                    <h4 class="name">Chandan Kumar</h4>
-                                    <p class="time">12:56</p>
+            <div class="quickbtn">
+                <div class="btn message"><ion-icon name="add-circle"></ion-icon></div>
+                <div class="btn message"><ion-icon name="add-circle"></ion-icon></div>
+                <div class="btn camera">
+                    <div class="pencil"><ion-icon name="pencil"></ion-icon></div>
+                    <ion-icon name="camera"></ion-icon>
+                </div>
+                <div class="btn call"><ion-icon name="call"></ion-icon></div>
+            </div>
+
+            <div class="content">
+                <div class="box chats">
+                    <div class="data">
+                        <div class="chatlist">
+                            <div class="block" id="block" onclick="direct">
+                                <div class="imgbx">
+                                    <img src="/Backend//img//chandan.jpeg" alt="">
                                 </div>
-                                <div class="message_p">
-                                    <p>Hello brother I need your urgent help</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="block" id="block2" onclick="direct()">
-                            <div class="imgbx">
-                                <img src="/Backend//img//avinav.jpeg" alt="">
-                            </div>
-                            <div class="details">
-                                <div class="listhead">
-                                    <h4 class="name2">Avinaw Kumar</h4>
-                                    <p class="time">11:11</p>
-                                </div>
-                                <div class="message_p">
-                                    <p>Can you help me in today's coding assignment?</p>
+                                <div class="details">
+                                    <div class="listhead">
+                                        <h4 class="name">Chandan Kumar</h4>
+                                        <p class="time">12:56</p>
+                                    </div>
+                                    <div class="message_p">
+                                        <p>Hello brother I need your urgent help</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="block" id="block3" onclick="direct()">
-                            <div class="imgbx">
-                                <img src="/Backend/img/Krunal.png" alt="">
-                            </div>
-                            <div class="details">
-                                <div class="listhead">
-                                    <h4 class="name3">Krunal A. Gurao</h4>
-                                    <p class="time">10:22</p>
+                            <div class="block" id="block2" onclick="direct">
+                                <div class="imgbx">
+                                    <img src="/Backend//img//avinav.jpeg" alt="">
                                 </div>
-                                <div class="message_p">
-                                    <p>Brother how much you got in today's DSA evaluation?</p>
+                                <div class="details">
+                                    <div class="listhead">
+                                        <h4 class="name2">Avinaw Kumar</h4>
+                                        <p class="time">11:11</p>
+                                    </div>
+                                    <div class="message_p">
+                                        <p>Can you help me in today's coding assignment?</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="block" id="block3" onclick="direct">
+                                <div class="imgbx">
+                                    <img src="/Backend/img/Krunal.png" alt="">
+                                </div>
+                                <div class="details">
+                                    <div class="listhead">
+                                        <h4 class="name3">Krunal A. Gurao</h4>
+                                        <p class="time">10:22</p>
+                                    </div>
+                                    <div class="message_p">
+                                        <p>Brother how much you got in today's DSA evaluation?</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="box group">
-                <div class="aaa">
-                <div>
+                <div class="box group">
+                    <div class="aaa">
+                        <div>
+                            <div class="data">
+                                <div class="chatlist">
+                                    <div class="block">
+                                        <div class="imgbx">
+                                            <img src="/Backend/img/Vartalap-1 (4).png" alt="">
+                                        </div>
+                                        <div class="details">
+                                            <div class="listhead">
+                                                <h4 id="name">Vartalap</h4>
+
+                                            </div>
+                                            <div class="message_p">
+                                                <p>It's chill time</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block">
+                                        <div class="imgbx">
+                                            <img src="/Backend//img/101.png" alt="">
+                                        </div>
+                                        <div class="details">
+                                            <div class="listhead">
+                                                <h4>NXM-101</h4>
+
+                                            </div>
+                                            <div class="message_p">
+                                                <p>New to Backend</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="block">
+                                        <div class="imgbx">
+                                            <img src="/Backend//img//201.png" alt="">
+                                        </div>
+                                        <div class="details">
+                                            <div class="listhead">
+                                                <h4>NXM-201</h4>
+
+                                            </div>
+                                            <div class="message_p">
+                                                <p>Learning Backend</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="join-container">
+                            <main class="join-main">
+                                <form action="chat.html">
+                                    <div class="form-control">
+                                        <label for="username">Username</label>
+                                        <input type="text" name="username" id="username" placeholder="Enter username..."
+                                            required />
+
+                                    </div>
+                                    <div class="form-control">
+                                        <label for="room">Room</label>
+                                        <input type="text" name="room" id="room" placeholder="Enter room name..."
+                                            required />
+                                    </div>
+                                    <button type="submit" class="btn">Enter Chat Room</button>
+                                </form>
+                            </main>
+                        </div>
+                    </div>
+                </div>
+                <div class="box status">
                     <div class="data">
                         <div class="chatlist">
                             <div class="block">
                                 <div class="imgbx">
-                                    <img src="/Backend/img/Vartalap-1 (4).png" alt="">
+                                    <img src="/Backend/img/pic.jpg" alt="">
                                 </div>
+                                <div class="plus">+</div>
                                 <div class="details">
                                     <div class="listhead">
-                                        <h4 id="name">Vartalap</h4>
-                                       
+                                        <h4>My Status</h4>
                                     </div>
                                     <div class="message_p">
-                                        <p>It's chill time</p>
+                                        <p>Tap to add status update</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="block">
+                            <label for="">Recent Updates</label>
+                            <div class="block unseen">
                                 <div class="imgbx">
-                                    <img src="/Backend//img/101.png" alt="">
+                                    <img src="/Backend/img/mern.webp" alt="">
                                 </div>
                                 <div class="details">
                                     <div class="listhead">
-                                        <h4>NXM-101</h4>
-                                        
+                                        <h4>Mangalam Kumar</h4>
+
                                     </div>
                                     <div class="message_p">
-                                        <p>New to Backend</p>
+                                        <p>Just Now</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="block">
+                            <label for="">Viewed Updates</label>
+                            <div class="block seen">
                                 <div class="imgbx">
-                                    <img src="/Backend//img//201.png" alt="">
+                                    <img src="/Backend/img/mern2.png" alt="">
                                 </div>
                                 <div class="details">
                                     <div class="listhead">
-                                        <h4>NXM-201</h4>
-                                        
+                                        <h4>Rutuja Deshmukh</h4>
+
                                     </div>
                                     <div class="message_p">
-                                        <p>Learning Backend</p>
+                                        <p>Yesterday 01:39</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="join-container">
-                    <main class="join-main">
-                        <form action="chat.html">
-                            <div class="form-control">
-                                <label for="username">Username</label>
-                                <input type="text" name="username" id="username" placeholder="Enter username..." required />
-                                
-                            </div>
-                            <div class="form-control">
-                                <label for="room">Room</label>
-                                <input type="text" name="room" id="room" placeholder="Enter room name..." required />
-                            </div>
-                            <button type="submit" class="btn">Enter Chat Room</button>
-                        </form>
-                    </main>
-                </div>
-            </div>
-            </div>
-            <div class="box status">
-                <div class="data">
-                    <div class="chatlist">
-                        <div class="block">
-                            <div class="imgbx">
-                                <img src="/Backend/img/pic.jpg" alt="">
-                            </div>
-                            <div class="plus">+</div>
-                            <div class="details">
-                                <div class="listhead">
-                                    <h4>My Status</h4>
+                <div class="box calls">
+                    <div class="data">
+                        <div class="chatlist">
+                            <div class="block">
+                                <div class="imgbx green">
+                                    <ion-icon name="link-outline"></ion-icon>
                                 </div>
-                                <div class="message_p">
-                                    <p>Tap to add status update</p>
+                                <div class="details">
+                                    <div class="listhead">
+                                        <h4>Create call link</h4>
+
+                                    </div>
+                                    <div class="message_p">
+                                        <p>Share a link for your WhatsApp call</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <label for="">Recent Updates</label>
-                        <div class="block unseen">
-                            <div class="imgbx">
-                                <img src="/Backend/img/mern.webp" alt="">
+                            <label for="">Recent</label>
+                            <div class="block">
+                                <div class="imgbx">
+                                    <img src="/Backend/img/chandan.jpeg" alt="">
+                                </div>
+                                <div class="details">
+                                    <div class="listhead">
+                                        <h4>Chandan Kumar</h4>
+
+                                    </div>
+                                    <div class="message_p incoming">
+                                        <p><ion-icon name="arrow-down"></ion-icon> 04/05/2023 01:39</p>
+                                    </div>
+                                </div>
+                                <ion-icon name="call" class="call"></ion-icon>
                             </div>
-                            <div class="details">
-                                <div class="listhead">
-                                    <h4>Mangalam Kumar</h4>
-                                   
+                            <div class="block">
+                                <div class="imgbx">
+                                    <img src="/Backend/img/avinav.jpeg" alt="">
                                 </div>
-                                <div class="message_p">
-                                    <p>Just Now</p>
+                                <div class="details">
+                                    <div class="listhead">
+                                        <h4>Avinaw Kumar</h4>
+
+                                    </div>
+                                    <div class="message_p outgoing">
+                                        <p><ion-icon name="arrow-up"></ion-icon> Yesterday 2:15</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <label for="">Viewed Updates</label>
-                        <div class="block seen">
-                            <div class="imgbx">
-                                <img src="/Backend/img/mern2.png" alt="">
-                            </div>
-                            <div class="details">
-                                <div class="listhead">
-                                    <h4>Rutuja Deshmukh</h4>
-                                   
-                                </div>
-                                <div class="message_p">
-                                    <p>Yesterday 01:39</p>
-                                </div>
+                                <ion-icon name="call" class="call"></ion-icon>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="box calls">
-                <div class="data">
-                    <div class="chatlist">
-                        <div class="block">
-                            <div class="imgbx green">
-                                <ion-icon name="link-outline"></ion-icon> 
-                            </div>
-                            <div class="details">
-                                <div class="listhead">
-                                    <h4>Create call link</h4>
-                                    
-                                </div>
-                                <div class="message_p">
-                                    <p>Share a link for your WhatsApp call</p>
-                                </div>
-                            </div>
-                        </div>
-                        <label for="">Recent</label>
-                        <div class="block">
-                            <div class="imgbx">
-                                <img src="/Backend/img/chandan.jpeg" alt="">
-                            </div>
-                            <div class="details">
-                                <div class="listhead">
-                                    <h4>Chandan Kumar</h4>
-                                   
-                                </div>
-                                <div class="message_p incoming">
-                                    <p><ion-icon name="arrow-down"></ion-icon> 04/05/2023 01:39</p>
-                                </div>
-                            </div>
-                            <ion-icon name="call" class="call"></ion-icon>
-                        </div>
-                        <div class="block">
-                            <div class="imgbx">
-                                <img src="/Backend/img/avinav.jpeg" alt="">
-                            </div>
-                            <div class="details">
-                                <div class="listhead">
-                                    <h4>Avinaw Kumar</h4>
-                                   
-                                </div>
-                                <div class="message_p outgoing">
-                                    <p><ion-icon name="arrow-up"></ion-icon> Yesterday 2:15</p>
-                                </div>
-                            </div>
-                            <ion-icon name="call" class="call"></ion-icon>
-                        </div>
-                    </div> 
                 </div>
             </div>
         </div>
+
     </div>
-   
-   </div>
 </body>
 <script>
-    let logout=document.querySelector(".logout");
-    let userAuthToken= localStorage.getItem("token") || null;
-    
-    let baseServerURL= "https://chat-app-2pe3.onrender.com/"
-   
-    logout.addEventListener("click", async () =>{
-  try {
-    let res = await fetch(`${baseServerURL}/admin/logout`,{
-      method: "GET",
-      headers:{
-        "content-type":"application/json",
-        "Authorization": `Bearer ${userAuthToken}`
-      }
-    });
-    // let data = await res.json();
-    window.location.href= "../../../frontend/User/signin.html"
-    
-  } catch (error) {
-    console.log(error)
-  }
-})
+    let logout = document.querySelector(".logout");
+    let userAuthToken = localStorage.getItem("token") || '';
 
-let block=document.getElementById("block")
-let block2=document.getElementById("block2")
-let block3=document.getElementById("block3")
-block.addEventListener("click",()=>{
-    let name =document.querySelector(".name")
-let username=name.innerText;
-console.log(username)
-localStorage.setItem("username",username)
-})
+    let baseServerURL = "https://chat-app-2pe3.onrender.com/"
 
-block2.addEventListener("click",()=>{
-    let name =document.querySelector(".name2")
-let username=name.innerText;
-console.log(username)
-localStorage.setItem("username",username)
-})
+    logout.addEventListener("click", async () => {
+        // try {
+        //     let res = await fetch(`${baseServerURL}/admin/logout`, {
+        //         method: "GET",
+        //         headers: {
+        //             "content-type": "application/json",
+        //             "Authorization": `Bearer ${userAuthToken}`
+        //         }
+        //     });
+            // let data = await res.json();
+            window.location.href = "https://soft-alpaca-263d2d.netlify.app/frontend/user/signin.html"
+        // } catch (error) {
+        //     console.log(error)
+        // }
+    })
 
-block3.addEventListener("click",()=>{
-    let name =document.querySelector(".name3")
-let username=name.innerText;
-console.log(username)
-localStorage.setItem("username",username)
-})
+    let block = document.getElementById("block")
+    let block2 = document.getElementById("block2")
+    let block3 = document.getElementById("block3")
+    block.addEventListener("click", () => {
+        let name = document.querySelector(".name")
+        let username = name.innerText;
+        localStorage.setItem("username", username)
+    })
+
+    block2.addEventListener("click", () => {
+        let name = document.querySelector(".name2")
+        let username = name.innerText;
+        localStorage.setItem("username", username)
+    })
+
+    block3.addEventListener("click", () => {
+        let name = document.querySelector(".name3")
+        let username = name.innerText;
+        localStorage.setItem("username", username)
+    })
 
 
-function direct(){
-    window.location.href="../../../frontend/User/chatting.html"
-}
+    function direct() {
+        window.location.href = "https://soft-alpaca-263d2d.netlify.app/frontend/user/chatting.html"
+    }
 
 
 
 </script>
+
 </html>

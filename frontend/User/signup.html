@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +9,10 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>SIGNUP</title>
 </head>
+
 <body>
 
-    
+
     <style>
         * {
             margin: 0;
@@ -107,7 +109,7 @@
             bottom: 100px;
         }
 
-        .logdis>button{
+        .logdis>button {
             position: absolute;
             bottom: 40px;
             left: 35px;
@@ -120,10 +122,12 @@
             color: gray;
 
         }
-        .logdis>button:hover{
+
+        .logdis>button:hover {
             background-color: #DC3226;
             color: white;
         }
+
         .closeBTN {
             position: absolute;
             right: 20px;
@@ -136,15 +140,15 @@
         }
 
 
-/* ****************************************************************************************************** */
+        /* ****************************************************************************************************** */
 
 
-body {
+        body {
             font-family: 'Open Sans', sans-serif;
-           
-         }
 
-         .signup-form {
+        }
+
+        .signup-form {
             width: 500px;
             margin: 0px auto;
             padding: 2rem;
@@ -152,30 +156,30 @@ body {
             border-radius: 5px;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
             background-image: url("https://img.freepik.com/premium-photo/blank-green-paper-texture-background_7190-886.jpg?w=996");
-         }
+        }
 
-         .signup-heading {
+        .signup-heading {
             text-align: center;
             margin-top: 0;
             margin-bottom: 1.5rem;
             font-size: 2rem;
             font-weight: bold;
             color: #001621c0;
-         }
+        }
 
-         .form-group {
+        .form-group {
             margin-bottom: 1.5rem;
-         }
+        }
 
-         label {
+        label {
             display: block;
             font-weight: bold;
             margin-bottom: 0.5rem;
-         }
+        }
 
-         input[type="text"],
-         input[type="email"],
-         input[type="password"] {
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
             display: block;
             width: 100%;
             padding: 0.5rem;
@@ -183,9 +187,9 @@ body {
             border-radius: 3px;
             font-size: 1rem;
             margin-bottom: 0.5rem;
-         }
+        }
 
-         input[type="submit"] {
+        input[type="submit"] {
             background-color: #001621c0;
             color: #fff;
             padding: 0.5rem 1rem;
@@ -193,141 +197,133 @@ body {
             border-radius: 3px;
             cursor: pointer;
             font-size: 1rem;
-         }
+        }
 
-         #img {
+        #img {
             width: 20%;
             /* border: 1px solid black; */
-         }
+        }
 
-         #img img {
+        #img img {
             width: 40%;
             border-radius: 60px;
-         }
+        }
 
-         #shownamediv {
+        #shownamediv {
             text-align: center;
             /* border: 1px solid black; */
 
-         }
+        }
 
-         #showname {
+        #showname {
             font-family: cursive;
-         }
+        }
 
-         .form-group a {
+        .form-group a {
             margin-left: 5px;
             text-decoration: none;
             color: black;
-         }
+        }
 
-         .form-group a:hover {
+        .form-group a:hover {
             text-decoration: underline;
             color: green;
-         }
-         
-         section>div{
-            display:flex;
-            justify-content:space-evenly ;
-         }
+        }
 
-         #jack{
+        section>div {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #jack {
             display: flex;
             justify-content: space-around;
-         }
-         .form-group input:hover {
-           
+        }
+
+        .form-group input:hover {
+
             color: black;
-         }
-
+        }
     </style>
-</head>
+    </head>
 
-<body>
-    <div class="maincont">
-        <img src="https://www.itl.cat/pngfile/big/14-143201_start-download-teal-wallpaper-for-iphone.jpg" alt="ERROR" class="edit">
-    </div>
+    <body>
 
-    <div class=" subcont">
-       
+        <div class=" subcont">
             <div class="signup-form">
                 <h2 class="signup-heading">Sign-Up</h2>
                 <form>
-                   <div class="form-group">
-                      <label for="name">Username:</label>
-                      <input type="text" id="name" name="name" placeholder="Enter your username*" required>
-                   </div>
-                   <div class="form-group">
-                      <label for="email">Email ID:</label>
-                      <input type="email" id="email" name="email" placeholder="Enter your email ID*" required>
-                   </div>
-                   <div class="form-group" id="jane">
-                      <label for="password">Password:</label>
-                      <input type="password" id="password" placeholder="Enter your password*" required>
-                   </div>
-                   <div class="form-group" id="jack">
-                      <input type="submit" value="Sign-Up">
-                      <a href="./signin.html">Sign-In</a>
-                   </div>
+                    <div class="form-group">
+                        <label for="name">Username:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your username*" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email ID:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email ID*" required>
+                    </div>
+                    <div class="form-group" id="jane">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" placeholder="Enter your password*" required>
+                    </div>
+                    <div class="form-group" id="jack">
+                        <input type="submit" value="Sign-Up">
+                        <a href="./signin.html">Sign-In</a>
+                    </div>
                 </form>
-             </div>
-       
-    </div>
-</body>
+            </div>
+
+        </div>
+    </body>
+
 </html>
 <script>
 
-const BaseServerUrl = `https://chat-app-2pe3.onrender.com/`
+    const BaseServerUrl = `https://chat-app-2pe3.onrender.com/`
 
-let formel = document.querySelector("form")
-let nameel = document.getElementById('name')
-let emailel = document.getElementById("email")
-let passwordel = document.getElementById("password")
-let showname = document.getElementById("showname")
+    let formel = document.querySelector("form")
+    let nameel = document.getElementById('name')
+    let emailel = document.getElementById("email")
+    let passwordel = document.getElementById("password")
+    let showname = document.getElementById("showname")
 
-formel.addEventListener("submit", (e) => {
-    e.preventDefault()
+    formel.addEventListener("submit", (e) => {
+        e.preventDefault()
 
-    let obj = {
-        name: nameel.value,
-        email: emailel.value,
-        password: passwordel.value,
+        let obj = {
+            name: nameel.value,
+            email: emailel.value,
+            password: passwordel.value,
 
-    }
+        }
 
-    fetch(`${BaseServerUrl}users/register`, {
-        method: "POST",
-        headers: {
-            "Content-type": "application/json"
-        },
-        body: JSON.stringify(obj)
+        fetch(`${BaseServerUrl}users/register`, {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify(obj)
 
+        })
+            .then((res) => {
+                return res.json()
+            })
+            .then((data) => {
+                console.log(data);
+                let timerInterval
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: data.msg,
+                    showConfirmButton: false,
+                    timer: 2500
+                })
+                setTimeout(() => {
+                    window.location.href = "signin.html"
+                }, 3000)
+
+            }).catch((err) => {
+                data.msg
+            })
     })
-        .then((res) => {
-            return res.json()
-        })
-        .then((data) => {
-            console.log(data);
-
-            
- 
-let timerInterval
-Swal.fire({
-  position: 'center',
-  icon: 'success',
-  title: data.msg,
-  showConfirmButton: false,
-  timer: 2500
-})
-           
-            
-            setTimeout(() => {
-                window.location.href = "signin.html"
-            }, 3000)
-           
-        }).catch((err) => {
-           data.msg
-        })
-})
 
 </script>
