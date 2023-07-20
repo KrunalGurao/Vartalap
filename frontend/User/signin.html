@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +9,10 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>SIGNIN</title>
 </head>
+
 <body>
 
-    
+
     <style>
         * {
             margin: 0;
@@ -107,7 +109,7 @@
             bottom: 100px;
         }
 
-        .logdis>button{
+        .logdis>button {
             position: absolute;
             bottom: 40px;
             left: 35px;
@@ -120,10 +122,12 @@
             color: gray;
 
         }
-        .logdis>button:hover{
+
+        .logdis>button:hover {
             background-color: #DC3226;
             color: white;
         }
+
         .closeBTN {
             position: absolute;
             right: 20px;
@@ -136,10 +140,10 @@
         }
 
 
-/* ****************************************************************************************************** */
+        /* ****************************************************************************************************** */
 
 
-body {
+        body {
             font-family: 'Open Sans', sans-serif;
             background-image: url("https://img.freepik.com/premium-photo/blank-green-paper-texture-background-detail-close-up_7190-1234.jpg?w=996");
         }
@@ -224,7 +228,7 @@ body {
 
         #img {
             width: 20%;
-           
+
         }
 
         #img img {
@@ -234,7 +238,7 @@ body {
 
         #shownamediv {
             text-align: center;
-          
+
 
         }
 
@@ -246,127 +250,108 @@ body {
             display: flex;
             justify-content: space-evenly;
         }
-
-
-
     </style>
-</head>
+    </head>
 
-<body>
-    <div class="maincont">
-        <img src="https://www.itl.cat/pngfile/big/14-143201_start-download-teal-wallpaper-for-iphone.jpg" alt="ERROR" class="edit">
-    </div>
+    <body>
+        <div class=" subcont">
 
-    <div class=" subcont">
-       
-        <div class="login-container">
-            <h1>Sign-In</h1>
-            <form>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" placeholder="Enter your email*" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" placeholder="Enter your password*" name="password" required>
-                </div>
-                <button type="submit">Login</button>
-                <div id="right">
-                    <a href="./signup.html">Sign-Up</a>
-                </div>
-            </form>
+            <div class="login-container">
+                <h1>Sign-In</h1>
+                <form>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" placeholder="Enter your email*" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" placeholder="Enter your password*" name="password"
+                            required>
+                    </div>
+                    <button type="submit">Login</button>
+                    <div id="right">
+                        <a href="./signup.html">Sign-Up</a>
+                    </div>
+                </form>
+            </div>
+
         </div>
-       
-    </div>
-</body>
+    </body>
+
 </html>
 <script>
 
-const BaseServerUrl =  `https://chat-app-2pe3.onrender.com/`
+    const BaseServerUrl = `https://chat-app-2pe3.onrender.com/`
 
-let formel = document.querySelector("form")
+    let formel = document.querySelector("form")
 
-let emailel = document.getElementById("email")
-let passwordel = document.getElementById("password")
-let showname = document.getElementById("showname")
-console.log("object");
-formel.addEventListener("submit", (e) => {
-    e.preventDefault()
+    let emailel = document.getElementById("email")
+    let passwordel = document.getElementById("password")
+    let showname = document.getElementById("showname")
+    console.log("object");
+    formel.addEventListener("submit", (e) => {
+        e.preventDefault()
+        let obj = {
+            email: emailel.value,
+            password: passwordel.value,
+        }
+        fetch(`${BaseServerUrl}users/login`, {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify(obj)
 
-    let obj = {
+        })
+            .then((res) => {
+                return res.json()
+            })
+            .then((data) => {
 
-        email: emailel.value,
-        password: passwordel.value,
+                if (data.msg == "Wrong Credentials") {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Wrong Credentials!!',
+                        footer: '<a href="">Why do I have this issue?</a>'
+                    })
 
-    }
+                } else {
 
-    fetch(`${BaseServerUrl}users/login`, {
-        method: "POST",
-        headers: {
-            "Content-type": "application/json"
-        },
-        body: JSON.stringify(obj)
+                    let timerInterval
+                    Swal.fire({
+                        title: 'Login Successfully',
+                        html: 'Connecting people in <b></b> milliseconds.',
+                        timer: 2000,
+                        timerProgressBar: true,
+                        didOpen: () => {
+                            Swal.showLoading()
+                            const b = Swal.getHtmlContainer().querySelector('b')
+                            timerInterval = setInterval(() => {
+                                b.textContent = Swal.getTimerLeft()
+                            }, 100)
+                        },
+                        willClose: () => {
+                            clearInterval(timerInterval)
+                        }
+                    }).then((result) => {
+                        if (result.dismiss === Swal.DismissReason.timer) {
+                            console.log('I was closed by the timer')
+                        }
+                    })
+                    // localStorage.setItem("user", JSON.stringify(data.userdetails))
+                    // localStorage.setItem("token", JSON.stringify(data.token))
+                    setTimeout(() => {
+                        window.location.href = "https://clever-praline-b83f90.netlify.app/public/"
 
+                    }, 3000)
+                }
+
+
+
+            }).catch((err) => {
+                console.log(err);
+            })
     })
-        .then((res) => {
-            return res.json()
-        })
-        .then((data) => {
-            
-            if (data.msg == "Wrong Credentials") 
-            {
-    Swal.fire({
-  icon: 'error',
-  title: 'Oops...',
-  text: 'Wrong Credentials!!',
-  footer: '<a href="">Why do I have this issue?</a>'
-})
-
-} else {
-               
-let timerInterval
-Swal.fire({
-  title: 'Login Successfully',
-  html: 'Connecting people in <b></b> milliseconds.',
-  timer: 2000,
-  timerProgressBar: true,
-  didOpen: () => {
-    Swal.showLoading()
-    const b = Swal.getHtmlContainer().querySelector('b')
-    timerInterval = setInterval(() => {
-      b.textContent = Swal.getTimerLeft()
-    }, 100)
-  },
-  willClose: () => {
-    clearInterval(timerInterval)
-  }
-}).then((result) => {
- 
-  if (result.dismiss === Swal.DismissReason.timer) {
-    console.log('I was closed by the timer')
-  }
-})
-              
-
-                localStorage.setItem("user",JSON.stringify(data.userdetails))
-                localStorage.setItem("token",JSON.stringify(data.token))
-                console.log(JSON.stringify(data.userdetails));
-                
-
-                console.log(data.token);
-            
-                setTimeout(() => {
-                    window.location.href = "../../Backend/Group-chat/public/index.html"
-                    
-                }, 3000)
-                console.log(data);
-            }
-
-
-
-        }).catch((err) => {
-            console.log(err);
-        })
-})
 
 </script>
