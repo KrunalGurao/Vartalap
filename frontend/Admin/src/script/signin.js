@@ -1,10 +1,26 @@
 const baseServerUrl = 'https://chat-app-2pe3.onrender.com/admin'
+// const baseServerUrl = 'http://localhost:8998/admin'
 
 const formEl = document.querySelector('#formEl');
 const nameEl = document.querySelector('#validationCustom01')
 const emailEl = document.querySelector('#validationCustom02')
 const passwordEl = document.querySelector('#validationCustom03')
 const googleBtn = document.querySelector('#oauthGoogle');
+
+
+(()=>{
+    try{
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const acctoken = queryString.split('=')[1].split('%22')[1];
+        localStorage.setItem('token', acctoken);
+        console.log('after')
+        window.location.href = 'index.html'
+    }catch(err){
+        console.log(err);
+    }
+})();
+
 
 formEl.addEventListener('submit', (evnt) => {
     evnt.preventDefault();
@@ -15,7 +31,7 @@ formEl.addEventListener('submit', (evnt) => {
 })
 
 googleBtn.addEventListener('click', async ()=>{
-    // window.location.href = 'https://chat-app-2pe3.onrender.com/admin/auth/google'
+    window.location.href = `${baseServerUrl}/auth/google`
 })
 
 const signin = async (obj) => {

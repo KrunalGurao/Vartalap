@@ -1,4 +1,5 @@
-const baseServerUrl = 'https://chat-app-2pe3.onrender.com/admin'
+// const baseServerUrl = 'https://chat-app-2pe3.onrender.com/admin'
+const baseServerUrl = 'http://localhost:8998/admin';
 
 const spanEl = document.querySelector('#welcomeMsg');
 const logoutBtn = document.querySelector('#logoutFn');
