@@ -139,6 +139,7 @@ logoutBtn.addEventListener('click', async ()=>{
         localStorage.removeItem('email');
         localStorage.removeItem('role');
         localStorage.removeItem('icon');
+        localStorage.removeItem('user');
         window.location.href = 'login.html';
     }else{
         alert('Something went wrong');
