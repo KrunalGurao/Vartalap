@@ -45,15 +45,20 @@ const adminInfo = async (req, res)=>{
 }
 
 const adminAuth = async (req, res) => {
-    let isUserValid = await userModel.findOne({ email: req.user.email });
-    if (isUserValid && isUserValid.role === 'admin') {
-        const access_token = jwt.sign({ userId: isUserValid._id }, process.env.JWT_SECRET_KEY, { expiresIn: '4h' });
-        isUserValid.token = access_token;
-        const queryString = JSON.stringify(access_token);
-        res.redirect(`https://chat-app-2pe3.onrender.com/${queryString}`);
+    try{
+        let isUserValid = await userModel.findOne({email: req.user.email});
+        if(isUserValid && isUserValid.role === 'admin'){
+            const access_token = jwt.sign({userId: isUserValid._id}, process.env.JWT_SECRET_KEY, {expiresIn: '4h'});
+            isUserValid.token = access_token;
+            const queryString = JSON.stringify(access_token);
+            res.redirect(`http://127.0.0.1:5500/frontend/Admin/login.html?token=${queryString}`);
+        }else{
+            res.redirect(`http://127.0.0.1:5500/frontend/Admin/login.html`);
+        }
+    }catch(err){
+        console.log(err);
+        res.redirect('http://127.0.0.1:5500/frontend/Admin/login.html');
     }
-    else
-        res.status(400).send({ msg: "You are not authorized" });
 }
 
 const trafficReport = async (req, res)=>{

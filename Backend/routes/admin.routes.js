@@ -6,6 +6,8 @@ const passport = require('passport');
 const adminRouter = Router();
 require('dotenv').config();
 
+adminRouter.use(passport.initialize());
+
 adminRouter.post('/register', register);
 
 adminRouter.post('/login', login);
@@ -26,10 +28,7 @@ adminRouter.get('/list', authorization, listingAdmin);
 
 adminRouter.get('/auth/google', passport.authenticate('google', { scope: ['profile', 'email'] }));
 
-
 adminRouter.get('/auth/google/callback', passport.authenticate('google', {failureRedirect: '/login', session: false}), adminAuth);
-
-
 
 adminRouter.use('/*', (req, res) => {
     res.status(404).send('Page not found');
