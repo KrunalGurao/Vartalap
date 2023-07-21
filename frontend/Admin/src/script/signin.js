@@ -15,7 +15,7 @@ formEl.addEventListener('submit', (evnt) => {
 })
 
 googleBtn.addEventListener('click', async ()=>{
-    // window.location.href = 'https://chat-app-2pe3.onrender.com/admin/auth/google'
+    window.location.href = 'https://chat-app-2pe3.onrender.com/admin/auth/google'
 })
 
 const signin = async (obj) => {
@@ -33,6 +33,10 @@ const signin = async (obj) => {
         setTimeout(()=>{
             window.location.href = `./index.html`
         }, 1500)
+    }else{
+        res = await res.json();
+        console.log(res);
+        alert('Something went wrong');
     }
 }
 (() => {
