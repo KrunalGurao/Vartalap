@@ -1,4 +1,4 @@
-const baseServerUrl = 'https://chat-app-2pe3.onrender.com/admin'
+const baseServerUrl = 'https://vartalap-mpz9.onrender.com/admin'
 
 const spanEl = document.querySelector('#welcomeMsg');
 const logoutBtn = document.querySelector('#logoutFn');

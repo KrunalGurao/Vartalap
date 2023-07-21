@@ -1,4 +1,4 @@
-const baseServerUrl = 'https://chat-app-2pe3.onrender.com/admin'
+const baseServerUrl = 'https://vartalap-mpz9.onrender.com/admin'
 
 const formEl = document.querySelector('#formEl');
 const nameEl = document.querySelector('#validationCustom01')
@@ -15,7 +15,7 @@ formEl.addEventListener('submit', (evnt) => {
 })
 
 googleBtn.addEventListener('click', async ()=>{
-    window.location.href = 'https://chat-app-2pe3.onrender.com/admin/auth/google'
+    window.location.href = 'https://vartalap-mpz9.onrender.com/admin/auth/google'
 })
 
 const signin = async (obj) => {
