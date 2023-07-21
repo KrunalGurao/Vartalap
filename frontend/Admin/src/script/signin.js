@@ -6,6 +6,16 @@ const emailEl = document.querySelector('#validationCustom02')
 const passwordEl = document.querySelector('#validationCustom03')
 const googleBtn = document.querySelector('#oauthGoogle');
 
+(()=>{
+    try{
+        const queryString = window.location.search;
+        localStorage.setItem('token', queryString.split('=')[1].split('%22')[1]);
+        window.location.href = 'index.html';
+    }catch(err){
+        console.log(err);
+    }
+})();
+
 formEl.addEventListener('submit', (evnt) => {
     evnt.preventDefault();
     let obj = {};
