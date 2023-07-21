@@ -21,6 +21,9 @@ app.use("/users", userRouter)
 
 app.use('/admin', adminRouter);
 
+app.get('/', (req, res)=>{
+    res.send('home page');
+})
 
 
 // app.listen(process.env.PORT, ()=>{
