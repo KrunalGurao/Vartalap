@@ -66,5 +66,5 @@ Admin-Page:- https://amazing-liger-20092f.netlify.app/admin/login.html
 
 
 admin Credentials: 
-krunalgurao1@gmail.com
-krunal
+email: krunalgurao1@gmail.com
+password: krunal
