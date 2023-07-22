@@ -5,7 +5,7 @@
 ## Live Links:-
 User:- https://amazing-liger-20092f.netlify.app/user/signup.html
 <br>
-Group-Chat:- https://clever-praline-b83f90.netlify.app/public/
+Group-Chat:- https://peppy-kringle-3c5ff0.netlify.app/public/
 <br>
 Admin-Page:- https://amazing-liger-20092f.netlify.app/admin/login.html
 
