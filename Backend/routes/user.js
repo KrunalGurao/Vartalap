@@ -44,7 +44,7 @@ userRouter.post("/login", async (req, res) => {
             return res.status(400).json({ message: 'Invalid Credential' });
           }
     
-       else if(user) {
+       else if(user && user.isBlock) {
             bcrypt.compare(password, user.password, function (err, result) {
                 if (result) {
                     res.status(201).send({ "msg": "login successfully", "token": jwt.sign({ "userID": user._id }, "privateKey", { expiresIn: '3h' }),"userdetails":user })
