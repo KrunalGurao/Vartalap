@@ -13,6 +13,14 @@ const formateMessage = require("./utils/messages");
 const serverg = http.createServer(app);
 const io = socketio(serverg);
 
+app.get('/index', (req, res)=>{
+   res.sendFile('./public/index.html');
+})
+
+app.get('/chat', (req, res)=>{
+   res.sendFile('./public/chat.html');
+})
+
 
 app.get('/', (req, res)=>{
    res.send('working fine');
@@ -66,9 +74,6 @@ io.on("connection", (socket) => {
       })
 
    })
-
-
-
 })
 
 serverg.listen(8080, () => {
