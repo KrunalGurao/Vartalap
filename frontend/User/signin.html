@@ -339,10 +339,10 @@
                             console.log('I was closed by the timer')
                         }
                     })
-                    // localStorage.setItem("user", JSON.stringify(data.userdetails))
-                    // localStorage.setItem("token", JSON.stringify(data.token))
+                    let userdetails = JSON.stringify(data.userdetails);
+                    let token = JSON.stringify(data.token);
                     setTimeout(() => {
-                        window.location.href = "https://peppy-kringle-3c5ff0.netlify.app/public/"
+                        window.location.href = `https://peppy-kringle-3c5ff0.netlify.app/public?token=${token}&userdetails=${userdetails}`
                     }, 3000)
                 }
 

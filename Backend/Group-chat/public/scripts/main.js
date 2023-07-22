@@ -7,6 +7,8 @@ const button=document.querySelector(".button")
 
 const urlParams =  new URLSearchParams(window.location.search)
 
+const token = urlParams.get('token');
+localStorage.setItem('token', token);
 const username = urlParams.get('username');
 const room = urlParams.get("room");
 

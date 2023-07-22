@@ -284,24 +284,31 @@
 </body>
 <script>
     let logout = document.querySelector(".logout");
+    const urlParams =  new URLSearchParams(window.location.search)
+    (()=>{
+        const tkn = urlParams.get('token');
+        localStorage.setItem('token', tkn);
+        const username = urlParams.get('userdetails');
+        localStorage.setItem('userdetails',username);
+    })();
     let userAuthToken = localStorage.getItem("token") || '';
 
     let baseServerURL = "https://vartalap-mpz9.onrender.com/"
 
     logout.addEventListener("click", async () => {
-        // try {
-        //     let res = await fetch(`${baseServerURL}/admin/logout`, {
-        //         method: "GET",
-        //         headers: {
-        //             "content-type": "application/json",
-        //             "Authorization": `Bearer ${userAuthToken}`
-        //         }
-        //     });
-            // let data = await res.json();
+        try {
+            let res = await fetch(`${baseServerURL}/admin/logout`, {
+                method: "GET",
+                headers: {
+                    "content-type": "application/json",
+                    "Authorization": `Bearer ${userAuthToken}`
+                }
+            });
+            let data = await res.json();
             window.location.href = "https://amazing-liger-20092f.netlify.app/user/signin.html"
-        // } catch (error) {
-        //     console.log(error)
-        // }
+        } catch (error) {
+            console.log(error)
+        }
     })
 
     let block = document.getElementById("block")
