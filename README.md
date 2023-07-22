@@ -3,11 +3,11 @@
 #### Web application for message exchange with users.
 
 ## Live Links:-
-Vartalap:- https://soft-alpaca-263d2d.netlify.app/user/signup
+User:- https://amazing-liger-20092f.netlify.app/user/signup.html
 <br>
-Group-Chat:- https://clever-praline-b83f90.netlify.app/public/
+Group-Chat_Backend_2:- https://clever-praline-b83f90.netlify.app/public/
 <br>
-Admin-Page:- https://bespoke-brioche-8510ee.netlify.app/
+Admin-Page:- https://amazing-liger-20092f.netlify.app/admin/login.html
 
 ## Tech Stack
 
