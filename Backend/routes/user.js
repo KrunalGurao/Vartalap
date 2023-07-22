@@ -44,7 +44,7 @@ userRouter.post("/login", async (req, res) => {
             return res.status(400).json({ message: 'Invalid Credential' });
           }
     
-       else if(user && user.isBlock) {
+       else if(user && !user.isBlock) {
             bcrypt.compare(password, user.password, function (err, result) {
                 if (result) {
                     res.status(201).send({ "msg": "login successfully", "token": jwt.sign({ "userID": user._id }, "privateKey", { expiresIn: '3h' }),"userdetails":user })
@@ -52,7 +52,10 @@ userRouter.post("/login", async (req, res) => {
                     res.status(401).send({ "msg": "Wrong Credentials" })
                 }
             });
-        }}
+        }else{
+            res.status(200).send({msg: 'Wrong Credentials'});
+        }
+    }
      catch (error) {
         res.status(401).send({ "msg": "error occoured while login" })
 
