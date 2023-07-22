@@ -14,11 +14,11 @@ const serverg = http.createServer(app);
 const io = socketio(serverg);
 
 app.get('/index', (req, res)=>{
-   res.sendFile('./public/index.html');
+   res.render('./public/index.html');
 })
 
 app.get('/chat', (req, res)=>{
-   res.sendFile('./public/chat.html');
+   res.render('./public/chat.html');
 })
 
 
