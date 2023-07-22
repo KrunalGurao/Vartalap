@@ -51,13 +51,13 @@ const adminAuth = async (req, res) => {
             const access_token = jwt.sign({userId: isUserValid._id}, process.env.JWT_SECRET_KEY, {expiresIn: '4h'});
             isUserValid.token = access_token;
             const queryString = JSON.stringify(access_token);
-            res.redirect(`http://127.0.0.1:5500/frontend/Admin/login.html?token=${queryString}`);
+            res.redirect(`https://amazing-liger-20092f.netlify.app/admin/login.html?token=${queryString}`);
         }else{
-            res.redirect(`http://127.0.0.1:5500/frontend/Admin/login.html`);
+            res.redirect(`https://amazing-liger-20092f.netlify.app/admin/login.html`);
         }
     }catch(err){
         console.log(err);
-        res.redirect('http://127.0.0.1:5500/frontend/Admin/login.html');
+        res.redirect('https://amazing-liger-20092f.netlify.app/admin/login.html');
     }
 }
 
