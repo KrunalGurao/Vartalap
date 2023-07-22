@@ -96,5 +96,5 @@ function outputMessage(message){
 }
 
 button.addEventListener("click",()=>{
-    window.location.href="index.html"
+    window.location.href="https://peppy-kringle-3c5ff0.netlify.app/public"
 })
